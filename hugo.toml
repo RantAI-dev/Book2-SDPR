@@ -1,6 +1,6 @@
-baseURL = '/'
+baseURL = 'https://sdpr.rantai.dev'
 languageCode = 'en-us'
-title = 'Software Design Patterns in Rust'
+title = 'Software Design Pattern in Rust'
 
 [module]
     # uncomment line below for temporary local development of module,
@@ -15,7 +15,7 @@ title = 'Software Design Patterns in Rust'
         
 [languages]
   [languages.en]
-    title = "Software Design Patterns in Rust"
+    title = "Software Design Pattern in Rust"
     languageName = "English"
     weight = 1
 
@@ -70,7 +70,7 @@ title = 'Software Design Patterns in Rust'
 
         # pathName        = "book"                            # path name for documentation site | default "docs"
 
-        themeColor      = "cardinal"                            # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
+        themeColor      = "emerald"                            # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
 
         darkMode        = true                                # enable dark mode option? default false
 

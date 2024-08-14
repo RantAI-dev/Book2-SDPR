@@ -27,7 +27,6 @@
 <section id="{{ $sectionTitle }}" class="d-table w-100 overflow-hidden hero">
     <div class="container">
         <div class="row mt-5 align-items-center">
-
             <div class="col-lg-6 col-md-6">
                 <div class="title-heading">
                     {{ with .badge }}
@@ -57,34 +56,71 @@
                         {{ with .title }}{{ . }}{{ end }}
                     </h4>
                     {{ with .subtitle }}
-                    <p class="para-desc text-muted mb-0">{{ . | markdownify }}</p>
+                    <p style="font-size: 32px; font-weight: bold; color: #50C878;">{{ . | markdownify }}</p>
                     {{ end }}
 
                     <div class="mt-3">
-                        {{ with .ctaButton }}
-                            <a href="{{ relLangURL .Site.Data.landing.hero.ctaButton.url }}" class="btn btn-lg btn-primary me-2 mt-2">
-                                {{ with .icon }}
-                                    <span class="material-icons align-middle">{{ . }}</span>
-                                {{ end }}
-                                {{ with .btnText }}
-                                    {{ . }}
-                                {{ end }}
-                            </a>
-                        {{ end }}
-                        {{ with .cta2Button }}
-                        <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-primary mt-2">
-                            {{ with .icon }}
-                                <span class="material-icons align-middle">{{ . }}</span>
-                            {{ end }}
-                            {{ with .btnText }}
-                                {{ . }}
-                            {{ end }}
-                        </a>
-                        {{ end }}
-                    </div>
-
+                      <style>
+                          .btn-cardinal {
+                              background-color: #50C878;
+                              color: white;
+                              border-color: #50C878;
+                          }
+                          .btn-cardinal:hover {
+                              background-color: #A3162D; /* Slightly darker for hover */
+                              color: white;
+                              border-color: #A3162D;
+                          }
+                          .btn-outline-cardinal {
+                              color: #50C878;
+                              border-color: #50C878;
+                              background-color: transparent;
+                          }
+                          .btn-outline-cardinal:hover {
+                              background-color: #50C878;
+                              color: white;
+                              border-color: #50C878;
+                          }
+                      </style>
+                  
+                      {{ with .ctaButton }}
+                          <a href="/docs/software-design-pattern-in-rust" class="btn btn-lg btn-cardinal me-2 mt-2">
+                              {{ with .icon }}
+                                  <span class="material-icons align-middle">{{ . }}</span>
+                              {{ end }}
+                              {{ with .btnText }}
+                                  {{ . }}
+                              {{ end }}
+                          </a>
+                      {{ end }}
+                      {{ with .cta2Button }}
+                          <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-cardinal mt-2">
+                              {{ with .icon }}
+                                  <span class="material-icons align-middle">{{ . }}</span>
+                              {{ end }}
+                              {{ with .btnText }}
+                                  {{ . }}
+                              {{ end }}
+                          </a>
+                      {{ end }}
+                  </div>
+                  
                     {{ with .info }}
-                    <p class="text-muted mb-0 mt-3">{{ . | markdownify }}</p>
+                    <div style="margin-top: 20px;">
+                      <p style="font-size: 16px; font-weight: bold; color: #50C878;">License Information</p>
+                      <div style="padding: 15px; background-color: #f9f9f9; border-left: 5px solid #50C878; margin-bottom: 20px;">
+                          This publication is available under the following terms:
+                          <div style="margin-top: 10px; font-weight: bold; color: #333;">
+                              Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+                              <div style="color: #50C878;">(CC BY-NC-ND 4.0)</div>
+                          </div>
+                          <p style="margin-top: 10px;">
+                              This license allows you to share — copy and redistribute the material in any medium or format under the condition that you give appropriate credit, do not use the material for commercial purposes, and do not modify the material.
+                              <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="text-decoration: none; color: #0056b3;">Learn more about this license.</a>
+                          </p>
+                      </div>
+                  </div>
+                  
                     {{ end }}
                 </div>
             </div>
@@ -105,7 +141,7 @@
                                         {{ .Content | safeHTML }}
                                     {{ else }}
                                         {{ with .Resize (printf "%dx%d webp q85 drawing Lanczos" .Width .Height) }}
-                                            <img src="{{ .RelPermalink }}" class="{{ if $boxShadow }}shadow-lg{{ else }}{{ end }} mx-auto d-block {{ if $rounded }}rounded-top-4{{ else }}{{ end }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}">
+                                            <img src="{{ .RelPermalink }}" class="{{ if $boxShadow }}shadow-lg{{ else }}{{ end }} mx-auto d-block {{ if $rounded }}rounded-top-4{{ else }}{{ end }}" width="375" height= "auto" alt="{{ $alt }}">
                                         {{ end }}
                                     {{ end }}
                                 {{ end }}
