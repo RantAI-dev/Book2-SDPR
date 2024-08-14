@@ -1,4 +1,4 @@
-module BOOK1-TRPL
+module BOOK2-SDPR
 
 go 1.22.5
 
