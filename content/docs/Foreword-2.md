@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:53:33+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-## 📖 Foreword
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Science is a way of thinking much more than it is a body of knowledge.</em>" — Carl Sagan</strong>

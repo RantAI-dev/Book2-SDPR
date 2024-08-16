@@ -9,12 +9,6 @@ draft: false
 toc: true
 ---
 
-<center>
-
-## 📘 Preface
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Design is not just what it looks like and feels like. Design is how it works.</em>" — Steve Jobs</strong>
 {{% /alert %}}
