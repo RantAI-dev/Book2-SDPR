@@ -1,2 +1,2 @@
-# Book1-TRPL
-Repository of The Rust Programming Language Hugo WebBook.
+# Book2-SDPR
+Repository of Software Design Patterns in Rust Hugo WebBook.

@@ -52,7 +52,7 @@ RantAI is a dynamic Indonesian tech startup dedicated to advancing technology th
 
 <center>
 
-## 👥 TRPL Authors
+## 👥 SDPR Authors
 
 </center>
 

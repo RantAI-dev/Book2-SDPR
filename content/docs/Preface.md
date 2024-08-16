@@ -15,43 +15,57 @@ toc: true
 
 </center>
 
-{{% alert icon="💡" context="info" %}}<strong>"<em>Any problem in computer science can be solved with another layer of indirection. But that usually will create another problem.</em>" —  Butler Lampson.</strong>{{% /alert %}}
+{{% alert icon="💡" context="info" %}}
+<strong>"<em>Design is not just what it looks like and feels like. Design is how it works.</em>" — Steve Jobs</strong>
+{{% /alert %}}
 
 {{% alert icon="📘" context="success" %}}
 
 <p style="text-align: justify;">
-Welcome to <em>The Rust Programming Language</em> (TRPL), your gateway to mastering Rust—a modern, versatile, and high-performance programming language crafted to enhance your coding experience with greater safety and efficiency. Rust stands on the shoulders of giants like C and C++ but addresses their critical challenges, such as memory safety and concurrency, making it an ideal choice for developers who demand reliability and speed.
+At RantAI, our mission is to propel Rust to the forefront of innovation in numerical, semi-numerical, and non-numerical computing domains. As a technology startup dedicated to developing cutting-edge digital twin simulation platforms, we understand that robust software design is the bedrock of reliable, maintainable, and scalable applications. This is why we are excited to present our book, <strong>Software Design Patterns in Rust</strong> (SDPR).
 </p>
 
 <p style="text-align: justify;">
-Rust’s innovative ownership model is a game-changer, enforcing strict memory safety without the need for a garbage collector. This model eradicates common bugs like null pointer dereferencing, buffer overflows, and data races, ensuring your code is robust and reliable. Rust also boasts advanced features such as pattern matching, trait-based polymorphism, a powerful macro system, and built-in concurrency primitives, empowering you to write efficient, safe code that directly interacts with hardware components.
+In today’s fast-paced technology landscape, the ability to design software systems that are both effective and adaptable is more crucial than ever. Design patterns offer a blueprint for solving common software design problems, providing tried-and-tested solutions that enhance code quality and maintainability. A deep understanding of these patterns is not merely advantageous—it is critical. The impact of poorly designed code can be profound, leading to a cascade of issues from inefficiencies and bugs to outright system failures. Code smells—those subtle signs of underlying problems—often indicate deeper design flaws that, if left unaddressed, can erode the integrity of your software.
 </p>
 
 <p style="text-align: justify;">
-In Rust, the struct is a powerful tool, emphasizing composition over inheritance. Rust’s structs and enums provide data encapsulation, memory safety through ownership and borrowing, implicit type conversions, user-controlled memory management, and operator overloading. These features enable you to create modular, maintainable, and performant code. The standard library prioritizes cross-platform portability, seamlessly integrating with C libraries to facilitate the incorporation of existing C codebases into your Rust projects.
+Our exploration of design patterns in Rust is built on foundational principles like SOLID, which guide us towards creating robust and adaptable systems. SOLID principles—Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion—are not just theoretical concepts; they are practical tools that help us craft software that can evolve gracefully over time.
 </p>
 
 <p style="text-align: justify;">
-The evolution of Rust is driven by a vibrant community and robust support from major tech firms. Born from Mozilla, Rust has gained widespread adoption across the industry. Companies like Microsoft, Google, Amazon, and Meta recognize Rust's potential in creating secure, high-performance software components. The Linux Foundation and Linus Torvalds are exploring the integration of Rust into the Linux kernel, highlighting Rust’s growing influence and versatility.
+Rust's approach to Object-Oriented Programming (OOP) introduces unique considerations for implementing design patterns. Rust’s emphasis on ownership and borrowing, coupled with its type system, brings a fresh perspective to traditional design patterns. This book delves into how Rust's features reshape and refine established patterns, offering insights into effective patterns for both familiar and novel challenges.
 </p>
 
 <p style="text-align: justify;">
-Rust isn’t just a pleasure to use; it empowers developers to achieve remarkable gains in productivity, maintainability, flexibility, and code quality across a wide range of projects. "The Rust Programming Language" (TRPL) introduces you to Rust’s core features and essential programming techniques, showcasing its robust and refined nature. With advancements such as async/await, modules, pattern matching, and its unique ownership system, Rust allows for the direct application of various techniques more effectively than ever before.
+In this book, we cover modern design patterns tailored specifically for Rust. These patterns are not only relevant but also optimized for Rust's strengths and constraints. Whether you are working on numerical simulations, semi-numerical systems, or entirely different computational domains, the principles and patterns discussed here will enhance your ability to design and implement high-quality software.
 </p>
 
 <p style="text-align: justify;">
-This book is a collaborative effort by the RantAI co-founders, with the assistance of ChatGPT and Gemini for writing, summarizing lectures, and generating sample codes. This synergy between human expertise and GenAI (CodeLLM) results in a comprehensive guide to mastering Rust. While Rust excels in systems programming, its applications extend to web development, embedded systems, network programming, blockchain protocols, scientific computing, machine learning, and more.
+Furthermore, the advent of Generative AI (GenAI) has revolutionized how we approach learning and problem-solving. By leveraging GenAI, we offer a faster learning process, enabling you to grasp complex concepts more quickly and apply them effectively. This synergy between human expertise and AI-driven insights accelerates your journey towards mastering software design patterns in Rust.
 </p>
 
 <p style="text-align: justify;">
-Our primary goal with TRPL is to help you understand how Rust’s features support essential programming techniques, going beyond merely copying examples or mimicking styles from other languages. A deep understanding of the principles behind Rust’s features is crucial for true mastery. We hope TRPL will provide you with new insights and help you become a better software engineer and designer. Enjoy your journey with Rust!
+At RantAI, a forward-thinking tech company founded in Indonesia with a global vision, we are dedicated to advancing Rust's capabilities and expanding its reach across various computing domains. This book is a reflection of our commitment, crafted to equip you with the tools and knowledge necessary to excel in designing robust software systems. Through this groundbreaking resource, we aim to transform how engineers approach software design patterns and master them at an unprecedented pace.
+</p>
+
+<p style="text-align: justify;">
+Our methodology is anchored in three foundational pillars: Fundamental, Conceptual, and Practical (FCP). By focusing on these aspects, we ensure that readers not only understand essential principles but also gain hands-on experience and effectively apply their knowledge in real-world scenarios. This approach helps bridge the gap between theory and application, empowering you to push the boundaries of what Rust can achieve.
+</p>
+
+<p style="text-align: justify;">
+We believe that mastering design patterns should transcend academic learning and act as a catalyst for innovation and career advancement. To support this vision, we are excited to offer a pathway for readers who excel with this book to apply for Software Design Engineer internship roles at RantAI. This opportunity is designed to inspire and motivate the next generation of engineers, providing them with a platform to apply their new skills and contribute to impactful projects. Join us in exploring the possibilities and advancing the future of software design with Rust.
+</p>
+
+<p style="text-align: justify;">
+Welcome to <strong>Software Design Patterns in Rust</strong>. We hope this journey inspires you to embrace best practices, tackle challenges with confidence, and contribute to the ongoing evolution of Rust in the world of computing.
 </p>
 
 {{% /alert %}}
 
 <center>
 
-Jakarta, July 20th, 2024.
+Jakarta, August 17th, 2024.
 
 &nbsp;
 
