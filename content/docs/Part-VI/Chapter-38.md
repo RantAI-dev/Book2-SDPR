@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 38.1. Introduction to Hexagonal Architecture
+## 38.1. Introduction to Hexagonal Architecture
 <p style="text-align: justify;">
 Hexagonal Architecture, also known as Ports and Adapters, is a design pattern that plays a crucial role in crafting systems that are both flexible and maintainable by clearly demarcating boundaries between the core application logic and external systems. At its core, Hexagonal Architecture aims to address the challenge of building software systems that can adapt to changing requirements and technologies over time. This pattern is designed to promote a separation of concerns by creating a clear distinction between the application's core logic and its interactions with external components such as databases, user interfaces, and other services.
 </p>
@@ -50,7 +50,7 @@ Furthermore, Hexagonal Architecture enhances maintainability by ensuring that ch
 In summary, Hexagonal Architecture provides a robust framework for designing flexible and maintainable software systems. Its emphasis on separating core business logic from external systems through the use of ports and adapters promotes adaptability, modularity, and improved testing practices. As software systems continue to grow in complexity, the principles of Hexagonal Architecture offer valuable guidance for creating systems that can evolve gracefully over time while maintaining a clear and organized structure.
 </p>
 
-# 38.2. Core Concepts and Architecture
+## 38.2. Core Concepts and Architecture
 <p style="text-align: justify;">
 The conceptual foundation of Hexagonal Architecture is rooted in the principle of separating an application's core logic from its external interactions through a well-defined set of ports and adapters. In Rust, this architectural pattern aligns closely with Rust’s emphasis on modularity, type safety, and clear separation of concerns, making it a natural fit for designing scalable and maintainable systems.
 </p>
@@ -91,7 +91,7 @@ In the context of Rust, Hexagonal Architecture benefits from the language’s st
 In summary, Hexagonal Architecture provides a robust framework for designing flexible and maintainable systems by separating core application logic from external interactions through well-defined ports and adapters. When compared to other architectural patterns such as Layered Architecture, Onion Architecture, and Clean Architecture, Hexagonal Architecture offers distinct advantages in terms of modularity, flexibility, and testability. While it may introduce additional complexity, the pattern aligns well with Rust’s design principles, making it a valuable approach for developing scalable and adaptable software systems.
 </p>
 
-# 38.3. Implementing Hexagonal Architecture in Rust
+## 38.3. Implementing Hexagonal Architecture in Rust
 <p style="text-align: justify;">
 Implementing Hexagonal Architecture in Rust involves leveraging the language's features such as traits, enums, and modules to define and manage core application components, ports, and adapters effectively. This approach ensures a clean separation between the core logic of the application and its interactions with external systems.
 </p>
@@ -189,7 +189,7 @@ In the <code>UserRepository</code> trait, methods like <code>save</code> and <co
 In summary, implementing Hexagonal Architecture in Rust involves creating a clear separation between core application logic and external interactions using traits, enums, and modules. By defining core components, ports, and adapters, and managing dependency injection through Rust's type system, developers can build flexible and maintainable systems. Addressing Rust-specific concerns such as ownership, borrowing, and lifetimes ensures that the architecture remains robust and reliable, taking full advantage of Rust’s safety and performance features.
 </p>
 
-# 38.4. Advanced Techniques for Hexagonal Architecture
+## 38.4. Advanced Techniques for Hexagonal Architecture
 <p style="text-align: justify;">
 Advanced techniques for implementing Hexagonal Architecture in Rust involve leveraging external crates for dependency injection and testing, handling asynchronous operations and concurrency, and integrating with Rust’s type system and error handling to enhance the flexibility and robustness of the system. These techniques build upon the foundational principles of Hexagonal Architecture to create more sophisticated and scalable applications.
 </p>
@@ -333,7 +333,7 @@ impl From<reqwest::Error> for UserServiceError {
 In summary, advanced techniques for implementing Hexagonal Architecture in Rust involve leveraging crates for dependency injection and testing, handling asynchronous operations using Rust’s <code>async/await</code> syntax, and integrating with Rust’s type system and error handling features. By employing these techniques, you can build robust and scalable applications that effectively manage external interactions and concurrency while maintaining a clear separation between core
 </p>
 
-# 38.5. Practical Implementation of Hexagonal Architecture
+## 38.5. Practical Implementation of Hexagonal Architecture
 <p style="text-align: justify;">
 Implementing Hexagonal Architecture in Rust involves a structured approach to designing systems that ensures modularity, testability, and scalability. This section provides a step-by-step guide to applying Hexagonal Architecture in Rust, presents examples of real-world applications, and outlines best practices for designing and managing hexagonal systems.
 </p>
@@ -441,7 +441,7 @@ When designing and managing hexagonal systems, adhere to best practices to ensur
 In conclusion, implementing Hexagonal Architecture in Rust involves a structured approach to designing core components, defining ports, and creating adapters. By following a step-by-step guide and adhering to best practices, you can build scalable, maintainable, and testable applications. Real-world examples demonstrate the practical application of this architecture in various domains, showcasing its effectiveness in managing complex interactions and dependencies.
 </p>
 
-# 38.6. Hexagonal Architecture and Modern Rust Ecosystem
+## 38.6. Hexagonal Architecture and Modern Rust Ecosystem
 <p style="text-align: justify;">
 Leveraging Hexagonal Architecture in the context of the modern Rust ecosystem involves using a range of Rust crates and libraries to support and enhance the architectural pattern. It also requires adopting strategies to maintain and evolve hexagonal architectures in large-scale projects, while integrating with contemporary Rust paradigms and techniques.
 </p>
@@ -506,12 +506,12 @@ Finally, integrating Rust’s ecosystem with modern tools such as Docker for con
 In summary, leveraging Rust crates and libraries supports Hexagonal Architecture by providing tools for asynchronous operations, dependency management, and testing. Maintaining and evolving hexagonal architectures in large-scale Rust projects requires strategies for managing boundaries, versioning, refactoring, and automated testing. Integrating with modern Rust paradigms, including ownership, borrowing, async/await, and type safety, enhances the flexibility and performance of hexagonal systems, making them well-suited for contemporary software development challenges.
 </p>
 
-# 38.7. Conclusion
+## 38.7. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Hexagonal Architecture pattern is crucial in modern software development because it ensures a clear separation between core application logic and external systems, promoting flexibility, maintainability, and testability. By isolating business rules from infrastructure concerns, Hexagonal Architecture enables teams to adapt to changing requirements and integrate new technologies without disrupting core functionalities. As software systems increasingly embrace microservices, asynchronous processing, and complex integrations, Hexagonal Architecture remains relevant by providing a robust framework for managing these complexities. In Rust, leveraging its strong type system, async capabilities, and modular design further enhances the benefits of Hexagonal Architecture, leading to more resilient and scalable applications. Future trends in Rust will likely continue to refine and evolve these practices, emphasizing greater interoperability, improved tooling for dependency management, and more sophisticated techniques for handling concurrency and data flow.
 </p>
 
-## 38.7.1. Advices
+### 38.7.1. Advices
 <p style="text-align: justify;">
 To implement the Hexagonal Architecture pattern effectively in a Rust project, focus on creating a clear separation between the core application logic and the external systems through well-defined ports and adapters. Begin by defining your core domain logic as isolated components that encapsulate business rules and operations. In Rust, this involves leveraging traits to define interfaces for these core components, ensuring that they remain agnostic of external systems and technologies. By structuring your core logic around traits and enums, you maintain a clean boundary between the application's core functionality and the interfaces through which it interacts with external systems.
 </p>
@@ -540,7 +540,7 @@ Managing data flow and consistency requires careful design. Ensure that data pas
 In summary, implementing Hexagonal Architecture in Rust involves leveraging Rust’s strengths in type safety, modularity, and async programming to build a system that is flexible, maintainable, and well-structured. By adhering to these principles, you can avoid common pitfalls and create a robust architecture that scales with your project’s needs.
 </p>
 
-## 38.7.2. Further Learning with GenAI
+### 38.7.2. Further Learning with GenAI
 <p style="text-align: justify;">
 To deeply understand the Hexagonal Architecture pattern in Rust, the following prompts will guide you through its technical intricacies and implementation strategies:
 </p>

@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 28.1. Introduction to Memento Pattern
+## 28.1. Introduction to Memento Pattern
 <p style="text-align: justify;">
 The Memento pattern is a design pattern that plays a crucial role in the domain of software design by offering a systematic approach to capturing and restoring an object's internal state without exposing its internal structure. At its core, the Memento pattern provides a way to preserve the state of an object at a particular point in time, allowing that state to be restored later without violating the principle of encapsulation. This is particularly useful in scenarios where it is necessary to revert an object to a previous state, such as in implementing undo/redo functionalities or rollback mechanisms.
 </p>
@@ -54,7 +54,7 @@ The Memento pattern’s relevance extends beyond simple undo/redo mechanisms. In
 In conclusion, the Memento pattern is a powerful tool in the software engineer’s arsenal, providing a structured way to capture and restore an object’s internal state without breaking encapsulation. Its historical significance and broad applicability make it an essential pattern for developers working on applications that require state management, rollback mechanisms, or undo/redo functionality. In Rust, the pattern must be adapted to align with the language’s unique features, but when implemented correctly, it offers a robust and efficient way to manage state in a wide range of applications.
 </p>
 
-# 28.2. Conceptual Foundations
+## 28.2. Conceptual Foundations
 <p style="text-align: justify;">
 To fully appreciate the Memento pattern within the context of Rust, it is essential to understand its key principles and how it compares to other behavioral patterns. The Memento pattern revolves around capturing and externalizing an object’s internal state, thereby enabling functionalities such as rollback or undo without exposing the object’s internal structure. This encapsulation of state is central to maintaining the integrity of the object while still allowing for flexible state management.
 </p>
@@ -91,7 +91,7 @@ However, there are also some disadvantages to using the Memento pattern. One not
 In conclusion, the Memento pattern provides a powerful approach to state management by encapsulating state snapshots and allowing for flexible rollback or undo functionalities. Its conceptual foundation aligns well with Rust’s emphasis on safety and encapsulation, but implementing it requires careful consideration of Rust’s unique features and constraints. While the pattern offers significant advantages in terms of modularity and encapsulation, it also presents challenges related to memory usage and complexity, which must be addressed through careful design and implementation.
 </p>
 
-# 28.3. Memento Pattern in Rust
+## 28.3. Memento Pattern in Rust
 <p style="text-align: justify;">
 The implementation of the Memento pattern in Rust involves careful consideration of Rust's type system, ownership model, and memory safety features. The pattern’s core components—the originator, the memento, and the caretaker—need to be designed to fit seamlessly within Rust’s paradigms. This section explores how to implement the Memento pattern in Rust using traits, structs, and enums, addressing specific Rust concerns such as ownership, borrowing, and lifetimes.
 </p>
@@ -261,7 +261,7 @@ By using enums, the <code>Memento</code> can encapsulate various states of the <
 In summary, implementing the Memento pattern in Rust involves leveraging the language’s features such as traits, structs, and enums while adhering to its ownership, borrowing, and lifetime rules. The initial basic implementation captures the essence of the Memento pattern, while the refined version with <code>Box</code> and enums addresses Rust-specific concerns and provides a more robust solution for managing state snapshots. This approach ensures that the Memento pattern integrates seamlessly with Rust’s safety and performance features, allowing for efficient and reliable state management.
 </p>
 
-# 28.4. Advanced Techniques for Memento in Rust
+## 28.4. Advanced Techniques for Memento in Rust
 <p style="text-align: justify;">
 The Memento pattern can be significantly enhanced by leveraging Rust's powerful features, such as enums and pattern matching, to manage different states and versions of mementos. Additionally, implementing efficient state management and restoration strategies, as well as integrating memento-based undo/redo functionality with Rust’s concurrency and asynchronous capabilities, are crucial for creating robust and high-performance applications. This section delves into these advanced techniques, providing a comprehensive explanation along with sample implementations in Rust.
 </p>
@@ -318,7 +318,7 @@ impl TextEditor {
 In this example, the <code>EditorState</code> enum encapsulates different content formats. The <code>TextEditor</code> class uses pattern matching to handle each state type during memento creation and restoration. This approach provides a clear and flexible way to manage different states within the same memento framework.
 </p>
 
-# 28.4.1. Efficient State Management and Restoration Strategies
+## 28.4.1. Efficient State Management and Restoration Strategies
 <p style="text-align: justify;">
 Efficiently managing and restoring state is essential for ensuring that the Memento pattern performs well, especially in applications with frequent state changes or large amounts of data. One effective strategy is to use incremental state snapshots. Instead of capturing the entire state every time, we can capture only the changes (deltas) since the last snapshot. This approach reduces memory usage and improves performance by minimizing the amount of data stored and restored.
 </p>
@@ -353,7 +353,7 @@ impl TextEditor {
 In this implementation, <code>IncrementalMemento</code> captures only the changes (delta) since the last base state. This method allows for efficient state management by storing minimal data and only applying incremental changes during restoration.
 </p>
 
-# 28.4.2. Undo/Redo Functionality with Concurrency and Async
+## 28.4.2. Undo/Redo Functionality with Concurrency and Async
 <p style="text-align: justify;">
 Integrating undo/redo functionality with Rust’s concurrency and asynchronous features involves managing state snapshots in a concurrent environment. Rust’s concurrency model, which emphasizes safety and performance, allows us to implement undo/redo functionality that works seamlessly across multiple threads or asynchronous contexts.
 </p>
@@ -410,7 +410,7 @@ In this example, <code>ThreadSafeCaretaker</code> uses <code>Arc</code> and <cod
 In summary, advanced techniques for implementing the Memento pattern in Rust involve leveraging enums for managing different states, using incremental snapshots for efficient state management, and integrating concurrency primitives for robust undo/redo functionality. By applying these techniques, developers can create scalable and efficient state management solutions that harness the full power of Rust's features.
 </p>
 
-# 28.5. Practical Implementation of Memento in Rust
+## 28.5. Practical Implementation of Memento in Rust
 <p style="text-align: justify;">
 Implementing the Memento pattern in Rust involves a structured approach that includes designing the pattern's components, applying advanced techniques, and adhering to best practices. This section provides a step-by-step guide to implementing the Memento pattern, offers real-world examples in Rust applications, and discusses best practices for managing state efficiently while avoiding common pitfalls.
 </p>
@@ -494,7 +494,7 @@ fn main() {
 In this example, the <code>TextEditor</code> class manages its state and provides methods to create and restore mementos. The <code>Caretaker</code> class handles multiple mementos, enabling undo functionality.
 </p>
 
-## 28.5.2. Examples and Best Practices of Memento Pattern
+### 28.5.2. Examples and Best Practices of Memento Pattern
 <p style="text-align: justify;">
 The Memento pattern is applicable in various real-world scenarios, particularly in applications that require state management with undo/redo functionality.
 </p>
@@ -583,7 +583,7 @@ When designing and managing memento-based state management, several best practic
 By adhering to these best practices, you can create a robust and efficient implementation of the Memento pattern in Rust, ensuring that your state management solution is both effective and performant.
 </p>
 
-# 28.6. Memento Pattern and Modern Rust Ecosystem
+## 28.6. Memento Pattern and Modern Rust Ecosystem
 <p style="text-align: justify;">
 Implementing the Memento pattern in Rust can be significantly enhanced by leveraging the rich set of Rust crates and libraries. These tools can simplify and improve the functionality of the Memento pattern, particularly when integrating with Rust’s type system, concurrency features, and error handling. Moreover, effective strategies for maintaining and evolving memento-based architectures are crucial for large-scale Rust projects.
 </p>
@@ -628,12 +628,12 @@ In terms of performance considerations, it is essential to optimize state serial
 Overall, the integration of Rust’s powerful type system, concurrency features, and error handling capabilities with the Memento pattern, alongside best practices for managing and evolving large-scale architectures, leads to a robust and flexible implementation of state management solutions in Rust.
 </p>
 
-# 28.7. Conclusion
+## 28.7. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Memento pattern is essential in modern software architecture for enabling undo/redo functionality, ensuring data integrity, and managing state changes without exposing internal object structures. The pattern provides a robust method to capture and restore object states, enhancing maintainability and flexibility in software design. In Rust, leveraging the Memento pattern effectively requires a deep grasp of ownership, borrowing, and concurrency features, allowing developers to build efficient and safe state management systems. As software architecture evolves, the integration of Memento with Rust's advanced features, such as async/await and concurrent programming, will drive new practices in state preservation and restoration, pushing the boundaries of performance and safety in complex, state-dependent applications.
 </p>
 
-## 28.7.1. Advices
+### 28.7.1. Advices
 <p style="text-align: justify;">
 Implementing the Memento pattern in a Rust project involves capturing and restoring an object's internal state without exposing its internal structure. To achieve this, you should leverage Rust’s powerful ownership and borrowing system alongside its traits, structs, and enums. Begin by defining a <code>Memento</code> struct that encapsulates the state you wish to capture. Ensure that this struct is immutable to maintain the integrity of the saved state. Create a trait, such as <code>Originator</code>, which will include methods for creating and restoring a memento. The object whose state needs to be saved (the originator) should implement this trait. Within this implementation, you will encapsulate the logic for saving the current state to a memento and restoring the state from a memento.
 </p>
@@ -654,7 +654,7 @@ Efficiency is paramount. Optimize the state capture and restoration processes to
 In summary, implementing the Memento pattern in Rust requires a deep understanding of the language’s ownership model, traits, and concurrency features. By encapsulating state efficiently, adhering to best practices, and optimizing performance, you can write elegant and robust code that leverages the full power of Rust while avoiding common pitfalls and code smells.
 </p>
 
-## 28.7.2. Further Learning with GenAI
+### 28.7.2. Further Learning with GenAI
 <p style="text-align: justify;">
 The following prompts are designed to delve deeply into the Memento design pattern, focusing on its implementation in Rust. They aim to cover a comprehensive range of topics, from fundamental concepts to advanced techniques and practical applications, ensuring a thorough understanding of the pattern and its use in real-world scenarios.
 </p>

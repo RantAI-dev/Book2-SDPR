@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 20.1. Introduction to Decorator Pattern
+## 20.1. Introduction to Decorator Pattern
 <p style="text-align: justify;">
 The Decorator pattern is a structural design pattern that allows developers to dynamically extend the functionality of objects without altering their existing code. It achieves this by wrapping an object with additional behavior, effectively creating a new composite object that behaves as the original, but with enhanced capabilities. This pattern is particularly valuable when multiple behaviors are needed on the same object, and those behaviors must be added or removed dynamically at runtime. The core idea is to provide a flexible and reusable way to modify an object's behavior without resorting to subclassing, which can lead to an explosion of classes and rigid code hierarchies.
 </p>
@@ -50,7 +50,7 @@ In Rust, the Decorator pattern takes on a unique flavor due to the language's em
 In conclusion, the Decorator pattern is a powerful tool for extending the functionality of objects in a dynamic and modular fashion. Its historical roots highlight its importance in addressing the limitations of inheritance, and its continued relevance in modern software design underscores its versatility and utility. In Rust, the Decorator pattern not only provides a means to enhance objects' behavior but also serves as a demonstration of how the language's features can be leveraged to implement design patterns in a safe and efficient manner.
 </p>
 
-# 20.2. Conceptual Foundations
+## 20.2. Conceptual Foundations
 <p style="text-align: justify;">
 The Decorator pattern is fundamentally anchored in the principle of extending an object's functionality without modifying its existing code. This concept aligns well with Rust's philosophy of safety, immutability, and explicit control over state and behavior. By encapsulating additional functionality within separate objects known as decorators, the Decorator pattern allows for a modular and flexible approach to enhancing behavior. Each decorator adheres to the same interface as the original object, ensuring that the decorated object can be used interchangeably with the original, preserving the integrity of the system's design.
 </p>
@@ -83,7 +83,7 @@ However, the Decorator pattern is not without its drawbacks. One potential disad
 In summary, the Decorator pattern in Rust builds on the key principle of extending functionality without modifying the underlying code, offering a flexible and modular approach to software design. While it shares certain characteristics with other structural patterns like Proxy, Composite, and Adapter, it stands out in its ability to dynamically add responsibilities to objects. The pattern's advantages, including enhanced modularity and code reuse, make it an attractive option for many scenarios. However, developers must also be mindful of its potential complexities and the challenges it can introduce, particularly in the context of Rust's ownership and borrowing system. By understanding these nuances, developers can effectively harness the power of the Decorator pattern to build robust and maintainable Rust applications.
 </p>
 
-# 20.3. Decorator Pattern in Rust
+## 20.3. Decorator Pattern in Rust
 <p style="text-align: justify;">
 Implementing the Decorator pattern in Rust involves leveraging the language's powerful type system, particularly its traits and structs, to create a flexible and reusable design that extends the functionality of objects at runtime. Let's begin by exploring a simple use case where we want to extend the behavior of a basic component in a Rust application.
 </p>
@@ -219,12 +219,12 @@ Lastly, it’s important to consider performance implications when implementing 
 In conclusion, the Decorator pattern in Rust can be effectively implemented using traits and structs, leveraging Rust’s robust type system to manage dynamic behavior and composition. By carefully handling ownership, borrowing, and lifetimes, developers can create flexible and reusable decorators that extend functionality without compromising safety or performance. Whether using simple boxed trait objects for single ownership or more advanced patterns like <code>Rc</code> and <code>RefCell</code> for shared ownership and interior mutability, the Decorator pattern remains a powerful tool in the Rust developer’s arsenal, enabling dynamic and modular extensions to object behavior.
 </p>
 
-# 20.4. Advanced Techniques for Decorator in Rust
+## 20.4. Advanced Techniques for Decorator in Rust
 <p style="text-align: justify;">
 The Decorator pattern is a powerful design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. Rust's unique features, such as trait objects, dynamic dispatch, and concurrency primitives, offer advanced techniques to enhance the Decorator pattern. This section explores these techniques, including using trait objects for flexible decoration, combining multiple decorators to build complex functionalities, and adapting the pattern for asynchronous and concurrent environments.
 </p>
 
-## 20.4.1. Using Trait Objects and Dynamic Dispatch for Flexible Decoration
+### 20.4.1. Using Trait Objects and Dynamic Dispatch for Flexible Decoration
 <p style="text-align: justify;">
 Rust's trait objects and dynamic dispatch facilitate flexible runtime composition of behaviors, which is crucial for implementing the Decorator pattern. Trait objects are pointers to data along with a vtable (virtual table) that contains pointers to the methods of the trait. This allows different types implementing the same trait to be treated uniformly, enabling decorators to be applied dynamically at runtime.
 </p>
@@ -302,7 +302,7 @@ fn main() {
 In this example, <code>PlainMessage</code> is first decorated by <code>ExcitingMessageDecorator</code>, which adds an exclamation mark. The result is then further decorated by <code>WhisperMessageDecorator</code>, which converts the string to lowercase. The use of <code>Rc<RefCell<dyn Message>></code> allows dynamic dispatch and chaining of decorators, showcasing Rust's flexibility with trait objects.
 </p>
 
-## 20.4.2. Combining Multiple Decorators to Build Complex Functionalities
+### 20.4.2. Combining Multiple Decorators to Build Complex Functionalities
 <p style="text-align: justify;">
 Combining multiple decorators allows for the creation of sophisticated functionalities by layering simple transformations. This technique is particularly useful when dealing with scenarios that require multiple orthogonal behaviors, such as logging, formatting, or validation.
 </p>
@@ -387,7 +387,7 @@ fn main() {
 In this pipeline, <code>UppercaseMessageDecorator</code> converts the message to uppercase, and <code>TimestampMessageDecorator</code> adds a timestamp. This combination demonstrates how decorators can be layered to build complex behavior while preserving modularity and maintainability.
 </p>
 
-## 20.4.3. Adapting the Decorator Pattern for Async and Concurrent Rust Environments
+### 20.4.3. Adapting the Decorator Pattern for Async and Concurrent Rust Environments
 <p style="text-align: justify;">
 In asynchronous Rust, decorators can handle non-blocking operations using <code>Future</code> types. This adaptation is essential for integrating decorators into async runtimes like Tokio, allowing them to perform tasks like network I/O without blocking.
 </p>
@@ -515,7 +515,7 @@ In this example, <code>ThreadSafeExcitingMessageDecorator</code> uses <code>Arc<
 In conclusion, advanced techniques for the Decorator pattern in Rust leverage trait objects and dynamic dispatch for runtime flexibility, combine multiple decorators to build complex functionalities, and adapt the pattern for asynchronous and concurrent environments. These enhancements allow developers to create modular, maintainable, and high-performance systems that fully exploit Rust’s capabilities, ensuring that the Decorator pattern remains a versatile and effective design solution.
 </p>
 
-# 20.5. Practical Implementation of Decorator in Rust
+## 20.5. Practical Implementation of Decorator in Rust
 <p style="text-align: justify;">
 The Composite pattern is a structural design pattern that allows clients to treat individual objects and compositions of objects uniformly. This pattern is particularly useful for representing part-whole hierarchies, where you need to work with both single objects and groups of objects in a consistent manner.
 </p>
@@ -614,7 +614,7 @@ fn main() {
 In this example, <code>root</code> is a composite that contains another composite (<code>composite1</code>) and a leaf node (<code>leaf3</code>). The <code>operation</code> method demonstrates how the Composite pattern allows for recursive composition and uniform treatment of individual and composite components.
 </p>
 
-## 20.5.1. Examples and Best Practices
+### 20.5.1. Examples and Best Practices
 <p style="text-align: justify;">
 The Composite pattern is used in various real-world scenarios where hierarchical structures are prevalent. One common application is in graphical user interfaces (GUIs), where components like windows, panels, and buttons can be treated uniformly. Another example is in document processing systems, where documents can contain sections, paragraphs, and text, all of which need to be managed in a consistent manner.
 </p>
@@ -632,7 +632,7 @@ When designing and using the Composite pattern, several best practices should be
 - <p style="text-align: justify;"><strong>Performance Considerations:</strong> The Composite pattern can lead to performance overhead due to the need to traverse the hierarchy. Profiling and optimizing critical paths in your application can help mitigate this impact.</p>
 - <p style="text-align: justify;"><strong>Memory Management:</strong> In Rust, use smart pointers like <code>Rc</code> (reference counting) and <code>RefCell</code> (interior mutability) to manage shared ownership and mutable access. This approach ensures that components can be safely shared and modified within the hierarchy.</p>
 - <p style="text-align: justify;"><strong>Recursive Operations:</strong> When implementing operations in a composite structure, ensure that recursive operations (e.g., traversing the hierarchy) are efficiently managed to avoid stack overflow or performance issues.</p>
-## 20.5.2. Advanced Techniques and Sample Implementations
+### 20.5.2. Advanced Techniques and Sample Implementations
 <p style="text-align: justify;">
 To further enhance the Composite pattern, advanced techniques can be applied, such as incorporating traits for additional behavior or using asynchronous operations.
 </p>
@@ -747,7 +747,7 @@ In this example, <code>AsyncLeaf</code> and <code>AsyncComposite</code> implemen
 In summary, the Composite pattern in Rust provides a robust mechanism for managing hierarchical structures by treating individual objects and compositions uniformly. By adhering to best practices and incorporating advanced techniques, such as trait-based extensions and asynchronous operations, you can build scalable and maintainable systems that leverage Rust’s powerful type system and concurrency features.
 </p>
 
-# 20.6. Decorator and Modern Rust Ecosystem
+## 20.6. Decorator and Modern Rust Ecosystem
 <p style="text-align: justify;">
 In Rust, the Decorator pattern is often implemented using traits, smart pointers, and trait objects to achieve dynamic behavior. The base of the pattern involves defining a trait that outlines the core functionality, which both the primary component and the decorators will implement. Traits in Rust are an excellent fit for this purpose due to their ability to define shared behavior that can be extended or modified by decorators.
 </p>
@@ -788,12 +788,12 @@ Testing plays a critical role in maintaining the integrity of decorators. Unit t
 Comprehensive documentation and adherence to Rust’s conventions for trait design, error handling, and concurrency are essential for managing decorators in a collaborative setting. Clear documentation helps maintain consistency and usability, while following best practices ensures that decorators remain reliable and maintainable over time. This approach supports a scalable and maintainable codebase, crucial for the success of large-scale projects.
 </p>
 
-# 20.7. Conclusion
+## 20.7. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Decorator pattern is pivotal in modern software architecture for its ability to enhance and extend object functionalities dynamically without altering their core structures, thus promoting modularity and flexibility. This pattern is particularly significant in scenarios where functionalities need to be added or modified at runtime, aligning with principles of open/closed design by allowing objects to be extended in a scalable manner. In Rust, the Decorator pattern leverages traits and smart pointers to manage dynamic behavior and maintain safety and performance, adhering to the language's stringent ownership and borrowing rules. As software architectures increasingly demand adaptable and maintainable solutions, future trends in Rust will likely continue to evolve towards more sophisticated uses of the Decorator pattern, integrating with asynchronous programming, concurrency, and functional programming paradigms to create robust and high-performance systems.
 </p>
 
-## 20.7.1. Advices
+### 20.7.1. Advices
 <p style="text-align: justify;">
 Implementing the Decorator pattern in Rust requires a nuanced understanding of Rust's ownership model, type system, and trait mechanisms to ensure that the design is both elegant and efficient. To begin with, the essence of the Decorator pattern is to add responsibilities to objects dynamically without modifying their structure. In Rust, this can be elegantly achieved using traits, which allow for the definition of a common interface while enabling flexible extensions.
 </p>
@@ -822,7 +822,7 @@ Furthermore, avoiding bad code and code smells involves adhering to Rust’s idi
 In summary, implementing the Decorator pattern in Rust demands careful attention to trait design, ownership management, and concurrency handling. By leveraging Rust's robust type system and concurrency primitives, you can create a modular and maintainable design that adheres to Rust's safety guarantees and idiomatic practices. This approach ensures that your code remains efficient, scalable, and free from common pitfalls associated with dynamic behavior extensions.
 </p>
 
-## 20.7.2. Further Learning with GenAI
+### 20.7.2. Further Learning with GenAI
 <p style="text-align: justify;">
 To delve deeper into the Decorator design pattern in Rust, here are ten prompts that explore its technical intricacies:
 </p>

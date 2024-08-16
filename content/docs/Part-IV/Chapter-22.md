@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 22.1. Introduction to Flyweight Pattern
+## 22.1. Introduction to Flyweight Pattern
 <p style="text-align: justify;">
 The Flyweight pattern is a structural design pattern that focuses on optimizing memory usage and minimizing the overhead of object creation by sharing common data across multiple instances. The core idea of the Flyweight pattern is to reduce the memory footprint of applications by reusing objects that have identical intrinsic states. Intrinsic state refers to the part of the object's state that is shared among instances, while extrinsic state pertains to data that varies between instances and is managed externally. By effectively managing these two types of states, the Flyweight pattern ensures that only a single instance of an object with a given intrinsic state is created, thus reducing the overall memory consumption and improving performance.
 </p>
@@ -42,7 +42,7 @@ The Flyweight pattern is particularly significant in scenarios where the creatio
 In the context of Rust, the Flyweight pattern's application is nuanced by Rust's unique features such as ownership, borrowing, and concurrency. Rust's strong type system and memory safety guarantees align well with the Flyweight pattern's goals, enabling developers to implement efficient and safe Flyweight structures. By leveraging Rust’s capabilities, such as the use of traits and HashMap for managing shared state, developers can implement Flyweight patterns that are both performant and aligned with Rust’s design principles. This section will delve into how the Flyweight pattern can be adapted to Rust’s ecosystem, exploring both the fundamental concepts and Rust-specific considerations in managing intrinsic and extrinsic states.
 </p>
 
-# 22.2. Conceptual Foundations
+## 22.2. Conceptual Foundations
 <p style="text-align: justify;">
 At its core, the Flyweight pattern revolves around the principles of sharing and reusing objects to optimize memory consumption. The primary objective is to manage the creation of objects efficiently by ensuring that common parts of object state are shared rather than duplicated. This sharing mechanism is divided into two main components: intrinsic and extrinsic states. Intrinsic states are those that remain constant and are shared across instances, while extrinsic states are variable and managed externally. By isolating the intrinsic state from the extrinsic state, the Flyweight pattern enables the reuse of common objects, thus minimizing the overhead associated with creating and maintaining multiple similar instances.
 </p>
@@ -63,7 +63,7 @@ However, the Flyweight pattern also comes with its own set of challenges. One no
 In Rust, the Flyweight pattern aligns well with the language’s principles of ownership and type safety. Rust's robust type system and memory management features provide a solid foundation for implementing Flyweight patterns efficiently. By leveraging Rust’s traits for defining shared behavior and HashMap for managing shared instances, developers can create Flyweight implementations that are both memory-efficient and safe. The language’s emphasis on preventing data races and ensuring safe concurrency further enhances the pattern’s applicability in complex and concurrent environments. As we explore the Flyweight pattern in Rust, we will delve into how these principles and features are utilized to achieve effective object sharing and memory optimization.
 </p>
 
-# 22.3. Flyweight Pattern in Rust
+## 22.3. Flyweight Pattern in Rust
 <p style="text-align: justify;">
 The Flyweight pattern in Rust can be implemented effectively by leveraging Rust’s powerful type system, traits, and concurrency features. To illustrate this, let’s first explore a simple use case of the Flyweight pattern and then delve into a more detailed and robust implementation.
 </p>
@@ -164,7 +164,7 @@ In this example, <code>button1</code> and <code>button3</code> share the same <c
 By leveraging Rust’s type system and concurrency features, we can implement the Flyweight pattern in a way that is both efficient and safe. Rust’s ownership model helps manage shared state effectively, while <code>Arc</code> and <code>RwLock</code> provide tools for handling concurrency and ensuring safe access to shared objects. This implementation demonstrates how the Flyweight pattern can be adapted to Rust’s ecosystem, providing a robust solution for optimizing memory usage and reducing object creation overhead.
 </p>
 
-# 22.4. Advanced Techniques for Flyweight in Rust
+## 22.4. Advanced Techniques for Flyweight in Rust
 <p style="text-align: justify;">
 Implementing the Flyweight pattern in Rust can be further refined by utilizing advanced techniques such as efficient management of Flyweight objects using Rust's collections, leveraging concurrency features for large-scale environments, and adapting the pattern for asynchronous and concurrent programming. These techniques enhance the pattern's applicability and performance in complex scenarios.
 </p>
@@ -259,7 +259,7 @@ fn main() {
 In this example, <code>ButtonFactory</code> uses <code>RwLock</code> to manage access to the <code>HashMap</code> of <code>ButtonFlyweight</code> instances, allowing multiple threads to read concurrently while ensuring safe modifications. The use of <code>Arc</code> ensures that <code>ButtonFlyweight</code> instances are safely shared across threads without the need for additional synchronization.
 </p>
 
-## 22.4.1. Adapting Flyweight for Async and Concurrent Programming
+### 22.4.1. Adapting Flyweight for Async and Concurrent Programming
 <p style="text-align: justify;">
 For asynchronous programming, Rust’s async/await syntax and asynchronous runtime libraries like Tokio can be integrated with the Flyweight pattern to handle tasks that involve I/O operations or other asynchronous activities. Adapting the Flyweight pattern to asynchronous contexts involves ensuring that shared Flyweight objects can be accessed safely in an asynchronous environment.
 </p>
@@ -306,7 +306,7 @@ In this asynchronous example, <code>ButtonFactory</code> uses <code>Mutex</code>
 By applying these advanced techniques, the Flyweight pattern can be effectively used in Rust to manage shared objects efficiently in both multi-threaded and asynchronous environments. Rust’s type system and concurrency features provide a robust foundation for implementing the Flyweight pattern, ensuring that memory usage is optimized while maintaining safety and performance.
 </p>
 
-# 22.5. Practical Implementation of Flyweight in Rust
+## 22.5. Practical Implementation of Flyweight in Rust
 <p style="text-align: justify;">
 Implementing the Flyweight pattern in Rust involves a series of steps to ensure that objects are managed efficiently through sharing and reuse. This section provides a detailed step-by-step guide to implementing the Flyweight pattern, offers examples of its application in real-world Rust scenarios, and discusses best practices for designing and managing Flyweight objects, including performance considerations and common pitfalls.
 </p>
@@ -404,7 +404,7 @@ fn main() {
 In this example, <code>SharedTextStyle</code> represents the intrinsic state of text styles, while <code>TextStyleFactory</code> manages the creation and retrieval of these styles. <code>Arc</code> is used to share <code>SharedTextStyle</code> instances across threads, and <code>RwLock</code> ensures safe concurrent access to the internal state.
 </p>
 
-## 22.5.1. Examples and Best Practices of Flyweight Pattern
+### 22.5.1. Examples and Best Practices of Flyweight Pattern
 <p style="text-align: justify;">
 The Flyweight pattern is useful in various real-world Rust applications, such as graphical user interfaces (GUIs) and game development. For instance, in a GUI library, different UI components (e.g., buttons, labels) may share common styles like colors and fonts. Using the Flyweight pattern, these styles can be efficiently managed and reused to reduce memory usage.
 </p>
@@ -426,7 +426,7 @@ When designing and managing Flyweight objects, consider the following best pract
 By following these best practices, you can design and manage Flyweight objects effectively, ensuring that the pattern delivers optimal performance and resource efficiency in your Rust applications. The Flyweight pattern, when implemented correctly, can significantly reduce memory consumption and improve application performance, making it a valuable tool for managing shared objects in complex and resource-constrained environments.
 </p>
 
-# 22.6. Flyweight and Modern Rust Ecosystem
+## 22.6. Flyweight and Modern Rust Ecosystem
 <p style="text-align: justify;">
 Leveraging Rust crates and libraries for implementing the Flyweight pattern can significantly enhance the pattern's effectiveness and integration within Rust's ecosystem. By integrating Flyweight with Rust's type system, error handling, and concurrency features, developers can create robust and efficient systems. Additionally, strategies for maintaining and evolving Flyweight implementations in large-scale Rust projects are essential for ensuring long-term performance and scalability.
 </p>
@@ -479,12 +479,12 @@ Lastly, documenting the Flyweight implementation and its usage patterns is cruci
 By leveraging Rust crates and libraries, integrating with Rust’s type system and concurrency features, and employing strategies for maintaining and evolving Flyweight implementations, developers can create robust and scalable systems that effectively manage shared objects while optimizing performance and resource usage.
 </p>
 
-# 22.7. Conclusion
+## 22.7. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Flyweight pattern is crucial in modern software architecture for optimizing memory usage and enhancing performance by reusing immutable objects. In complex systems where a large number of similar objects are instantiated, the Flyweight pattern minimizes the overhead associated with object creation by sharing common states and reducing redundancy. This pattern's significance is amplified in scenarios where memory efficiency and performance are paramount, such as graphics rendering, large-scale data processing, and real-time systems. In Rust, applying the Flyweight pattern benefits from the language’s strict ownership and type safety, leveraging its robust concurrency support to manage shared state efficiently. As Rust continues to evolve, future practices in applying Flyweight will likely focus on integrating with advanced concurrency models and asynchronous programming, optimizing for both single-threaded and multi-threaded contexts, and leveraging Rust’s ecosystem for even more refined and scalable implementations.
 </p>
 
-## 22.7.1. Advices
+### 22.7.1. Advices
 <p style="text-align: justify;">
 Implementing the Flyweight pattern in Rust demands a nuanced approach to efficiently manage memory and object creation while adhering to Rust’s strict ownership and borrowing rules. The core of the Flyweight pattern lies in decoupling intrinsic and extrinsic states, where intrinsic states are shared across multiple objects and extrinsic states vary for each object. In Rust, this often translates into careful use of traits and structs to encapsulate shared behavior and data, ensuring that intrinsic states are immutable and efficiently managed. To achieve this, design a <code>Flyweight</code> trait that defines the common interface for all concrete Flyweight implementations, encapsulating the shared state. Concrete implementations of this trait should use Rust’s powerful type system to ensure that intrinsic states are immutable and reusable, avoiding unnecessary allocations.
 </p>
@@ -505,7 +505,7 @@ Incorporate thorough testing and validation to handle edge cases, particularly i
 In summary, implementing the Flyweight pattern in Rust requires leveraging Rust’s ownership, borrowing, and smart pointer features to manage intrinsic and extrinsic states effectively. By focusing on immutability, careful management of shared ownership, and adhering to Rust’s safety guarantees, you can create an elegant and efficient Flyweight implementation while avoiding common pitfalls and maintaining code clarity.
 </p>
 
-## 22.7.2. Further Learning with GenAI
+### 22.7.2. Further Learning with GenAI
 <p style="text-align: justify;">
 To gain a deeper understanding of the Flyweight design pattern and its implementation in Rust, consider these prompts:
 </p>

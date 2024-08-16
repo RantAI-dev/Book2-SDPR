@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 27.1. Introduction to Mediator Pattern
+## 27.1. Introduction to Mediator Pattern
 <p style="text-align: justify;">
 The Mediator pattern is a behavioral design pattern that facilitates communication between objects in a system by introducing a central mediator object. This pattern plays a critical role in simplifying and decoupling interactions among multiple objects, especially in scenarios where direct communication would lead to complex interdependencies. The core idea behind the Mediator pattern is to encapsulate the interaction logic within a mediator, thereby allowing individual objects to focus solely on their specific responsibilities without needing to be aware of the intricacies of how they communicate with one another.
 </p>
@@ -50,7 +50,7 @@ In Rust, the importance of the Mediator pattern is further amplified by the lang
 In summary, the Mediator pattern is a powerful tool for managing object interactions in Rust, particularly in systems where communication complexity needs to be minimized. By introducing a mediator object to handle communication, the pattern reduces coupling, simplifies the overall architecture, and leverages Rust's strengths in managing ownership and lifetimes, resulting in more maintainable and robust software.
 </p>
 
-# 27.2. Conceptual Foundations
+## 27.2. Conceptual Foundations
 <p style="text-align: justify;">
 The Mediator pattern in Rust is built on key principles that align well with the language's emphasis on safety, concurrency, and efficient memory management. At its core, the Mediator pattern centralizes communication between objects, acting as an intermediary that facilitates interaction while preventing tight coupling. This centralization is crucial in systems where multiple objects need to interact in a coordinated manner, but where direct communication would lead to a web of dependencies that is difficult to manage and extend.
 </p>
@@ -87,7 +87,7 @@ In Rust, where developers must be mindful of ownership, borrowing, and lifetime 
 In summary, the conceptual foundation of the Mediator pattern in Rust revolves around centralizing communication to reduce coupling and simplify interactions between objects. Compared to other behavioral patterns like Observer, Command, and Strategy, the Mediator serves a distinct role in managing complex many-to-many relationships within a system. While the pattern offers significant advantages in terms of reducing complexity and enhancing modularity, it also introduces challenges related to the potential for increased complexity within the mediator itself. In the context of Rust, these challenges are further compounded by the need to carefully manage ownership and borrowing, making the design and implementation of the mediator a critical aspect of the pattern’s success.
 </p>
 
-# 27.3. Mediator Pattern in Rust
+## 27.3. Mediator Pattern in Rust
 <p style="text-align: justify;">
 Implementing the Mediator pattern in Rust involves leveraging the language’s features like traits, structs, and enums to create a robust system where communication between objects is centralized. The goal is to design a mediator that effectively coordinates the interactions between different objects (often referred to as colleagues) while adhering to Rust’s strict rules around ownership, borrowing, and lifetimes.
 </p>
@@ -283,7 +283,7 @@ The use of pattern matching in the <code>receive_message</code> method of the <c
 By adhering to Rust's principles of ownership and borrowing, and by utilizing enums for more complex interactions, this implementation of the Mediator pattern is both robust and idiomatic. It reduces the potential for runtime errors, makes the system easier to reason about, and leverages the strengths of Rust's type system to create a more maintainable and scalable solution.
 </p>
 
-# 27.4. Advanced Techniques for Mediator in Rust
+## 27.4. Advanced Techniques for Mediator in Rust
 <p style="text-align: justify;">
 The Mediator pattern, while already powerful in its basic form, can be extended using Rust's advanced features such as enums, pattern matching, asynchronous programming, and robust error handling. These techniques enable developers to design even more flexible and efficient mediators that can handle complex interactions and operate in concurrent environments. In this section, we explore these advanced techniques and demonstrate how they can be applied in Rust.
 </p>
@@ -387,7 +387,7 @@ fn main() {
 In this advanced example, the <code>Command</code> enum encapsulates various commands that the mediator must process. The <code>ChatRoom</code> mediator uses pattern matching to handle these commands, making the code both expressive and concise. This approach not only simplifies the mediator's logic but also ensures that all possible commands are handled explicitly, leveraging Rust's type system to enforce correctness at compile time.
 </p>
 
-## 27.4.1. Implementing Asynchronous and Concurrent Communication
+### 27.4.1. Implementing Asynchronous and Concurrent Communication
 <p style="text-align: justify;">
 In modern applications, mediators often need to manage asynchronous communication and handle multiple concurrent operations. Rust's <code>async/await</code> syntax and concurrency features, such as <code>tokio</code> and <code>async-std</code>, provide powerful tools for implementing such behavior in a way that is both efficient and safe.
 </p>
@@ -503,7 +503,7 @@ This implementation introduces asynchronous operations to the Mediator pattern. 
 By utilizing <code>tokio</code> and the <code>async_trait</code> crate, we ensure that the chat room can handle multiple messages concurrently without blocking the main thread. This approach is particularly useful in real-time applications where responsiveness is critical, such as chat systems, game servers, or IoT systems.
 </p>
 
-# 27.4.2. System and Error Handling
+## 27.4.2. System and Error Handling
 <p style="text-align: justify;">
 Rust’s type system is one of its core strengths, offering guarantees about memory safety and correctness at compile time. When implementing the Mediator pattern, it’s crucial to leverage this type system to enforce correct usage patterns and handle errors effectively.
 </p>
@@ -689,7 +689,7 @@ In this example, the <code>MediatorError</code> enum encapsulates potential erro
 By combining Rust’s enums, pattern matching, async/await features, and strong error handling capabilities, we can implement the Mediator pattern in a way that is both expressive and safe. These advanced techniques enable the creation of mediators that are capable of handling complex interactions and concurrency, while also ensuring correctness through compile-time checks and runtime error management.
 </p>
 
-# 27.5. Practical Implementation of Mediator in Rust
+## 27.5. Practical Implementation of Mediator in Rust
 <p style="text-align: justify;">
 The Mediator pattern is a behavioral design pattern that centralizes communication between different components, or "colleagues," to reduce dependencies and promote loose coupling. Implementing the Mediator pattern in Rust can enhance the modularity and maintainability of your applications, particularly when dealing with complex interactions among components. In this section, we will walk through a step-by-step guide to implementing the Mediator pattern, provide real-world examples, and discuss best practices for designing and managing mediator-based interactions.
 </p>
@@ -772,7 +772,7 @@ fn main() {
 In this basic example, we define a <code>Colleague</code> trait that represents a participant in the chat and a <code>Mediator</code> trait that manages the interactions between these participants. The <code>User</code> struct implements the <code>Colleague</code> trait, allowing it to send and receive messages through the mediator. The <code>ChatRoom</code> struct acts as the mediator, broadcasting messages from one user to all others. When a user sends a message, the <code>ChatRoom</code> mediator ensures that the message is delivered to all other users.
 </p>
 
-## 27.5.1. Examples and Best Practices of Mediator Pattern
+### 27.5.1. Examples and Best Practices of Mediator Pattern
 <p style="text-align: justify;">
 The Mediator pattern can be particularly useful in real-world applications where complex interactions between multiple components need to be managed. For instance, consider a GUI application where various UI elements (buttons, text fields, sliders) need to interact based on user input. Instead of each element directly interacting with others, which would create a tangled web of dependencies, a mediator can be used to manage these interactions in a centralized manner.
 </p>
@@ -932,7 +932,7 @@ Lastly, always be mindful of common pitfalls when using the Mediator pattern. On
 In conclusion, the Mediator pattern is a powerful tool for managing complex interactions in Rust applications. By following these best practices and leveraging Rust’s features, you can create mediators that are both efficient and maintainable, capable of handling the demands of real-world scenarios while ensuring your code remains clean and robust.
 </p>
 
-# 27.6. Mediator Pattern and Modern Rust Ecosystem
+## 27.6. Mediator Pattern and Modern Rust Ecosystem
 <p style="text-align: justify;">
 In large-scale Rust projects, the effective implementation of the Mediator pattern can be significantly enhanced by leveraging the ecosystem of Rust crates and libraries, integrating the pattern with Rust’s type system, concurrency features, and advanced traits. Additionally, strategies for maintaining and evolving mediator-based architectures are crucial for long-term project success.
 </p>
@@ -965,12 +965,12 @@ Finally, evolving mediator-based architectures involves adapting to new requirem
 In summary, implementing the Mediator pattern in Rust, particularly in large-scale applications, involves leveraging Rust’s ecosystem, type system, and concurrency features to create robust, maintainable, and performant architectures. By following best practices and employing thoughtful strategies, developers can ensure that their mediator-based designs are well-suited to the demands of real-world Rust applications, capable of evolving gracefully over time.
 </p>
 
-# 27.7. Conclusion
+## 27.7. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Mediator pattern is crucial in modern software architecture as it centralizes communication between components, thereby reducing direct dependencies and simplifying complex interactions. This pattern facilitates a more modular and maintainable system by allowing components to interact through a mediator rather than directly with each other. In contemporary software development, where systems often need to manage intricate communication and asynchronous operations, the Mediator pattern provides a structured approach to managing such complexity. In Rust, as software projects become increasingly concurrent and distributed, leveraging the Mediator pattern with Rust’s advanced type system, ownership model, and concurrency features will continue to be essential. Future trends may see more sophisticated integrations with asynchronous programming and distributed systems, ensuring that the Mediator pattern remains relevant and effective in evolving software landscapes.
 </p>
 
-## 27.7.1. Advices
+### 27.7.1. Advices
 <p style="text-align: justify;">
 To effectively implement the Mediator pattern in Rust, it is crucial to focus on the nuances of Rust's type system, ownership model, and concurrency features to ensure a clean, efficient, and maintainable design. The Mediator pattern centralizes communication between objects, reducing direct dependencies and simplifying interactions. In Rust, this involves designing a mediator as an interface that coordinates communication between different components, often implemented using traits and structs to encapsulate and manage interactions.
 </p>
@@ -999,7 +999,7 @@ As with any design pattern, maintaining clarity and preventing code smells invol
 In summary, implementing the Mediator pattern in Rust requires careful design consideration around traits, ownership, and concurrency. By leveraging Rust’s type system and concurrency features effectively, you can build a mediator that simplifies communication, enhances modularity, and ensures robust and efficient software architecture.
 </p>
 
-## 27.7.2. Further Learning with GenAI
+### 27.7.2. Further Learning with GenAI
 <p style="text-align: justify;">
 To gain a thorough understanding of the Mediator pattern and its application in Rust, consider the following prompts that delve deeply into its technical aspects:
 </p>

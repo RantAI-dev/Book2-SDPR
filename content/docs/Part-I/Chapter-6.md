@@ -24,7 +24,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 6.1. Introduction
+## 6.1. Introduction
 <p style="text-align: justify;">
 The GoF patterns are systematically categorized into three principal types: creational, structural, and behavioral. This classification is pivotal in understanding the distinct roles that each type of pattern plays in software design and how they contribute to creating effective and maintainable systems.
 </p>
@@ -36,7 +36,7 @@ The GoF patterns are systematically categorized into three principal types: crea
 Understanding these three categories—creational, structural, and behavioral—provides a foundational perspective on how different patterns address various aspects of software design. This classification not only helps in grasping the specific purpose and application of each pattern but also sets the stage for a deeper exploration of how these patterns can be adapted and utilized in different programming contexts, including modern languages and frameworks.
 </p>
 
-# 6.2. Creational Patterns
+## 6.2. Creational Patterns
 <p style="text-align: justify;">
 Creational design patterns focus on simplifying and controlling the process of object creation, addressing the complexities involved in instantiating objects in a flexible and efficient manner. These patterns are designed to abstract the instantiation process from the client code, allowing for more manageable and adaptable object creation mechanisms. The primary goal is to ensure that object creation is handled in a way that enhances flexibility, promotes reuse, and accommodates varying requirements at runtime without compromising the integrity of the system.
 </p>
@@ -45,7 +45,7 @@ Creational design patterns focus on simplifying and controlling the process of o
 Key creational patterns include the Singleton, Factory Method, Abstract Factory, Builder, and Prototype patterns. The Singleton pattern ensures that a class has only one instance while providing a global point of access to it. The Factory Method pattern defines an interface for creating objects but lets subclasses alter the type of objects that will be created. The Abstract Factory pattern builds on this by providing an interface to create families of related or dependent objects without specifying their concrete classes. The Builder pattern separates the construction of a complex object from its representation, allowing for different representations using the same construction process. Finally, the Prototype pattern involves creating new objects by copying an existing object, thus facilitating the creation of objects with similar configurations. Each of these patterns addresses different aspects of object creation, providing tailored solutions to common challenges in managing and constructing objects within a software system.
 </p>
 
-## 6.2.1. Singleton
+### 6.2.1. Singleton
 <p style="text-align: justify;">
 The Singleton pattern ensures that a class has only one instance throughout the application and provides a global point of access to that instance. This pattern is particularly useful when exactly one object is needed to coordinate actions across the system. In Rust, this can be implemented using <code>static</code> variables combined with synchronization primitives to ensure thread safety. Here’s an example of a Singleton pattern in Rust:
 </p>
@@ -80,7 +80,7 @@ fn main() {
 In this code, <code>Singleton</code> is a struct that we want to ensure has only one instance. The <code>get_instance</code> method uses a static mutable variable to hold the single instance of <code>Singleton</code>. The <code>Option</code> type is used to initialize the instance only once, using <code>get_or_insert_with</code> to safely create and store it. <code>Arc</code> and <code>Mutex</code> are employed to ensure thread safety, allowing safe access to the singleton instance across multiple threads. In the <code>main</code> function, <code>get_instance</code> is called to retrieve the singleton, and the <code>Mutex</code> is locked to access the <code>Singleton</code> instance and print its value. This approach ensures that the singleton instance is shared and synchronized across different parts of the application.
 </p>
 
-## 6.2.2. Factory Method
+### 6.2.2. Factory Method
 <p style="text-align: justify;">
 The Factory Method pattern provides an interface for creating objects but allows subclasses to alter the type of objects that will be created. This pattern is useful for delegating the responsibility of instantiation to subclasses, promoting loose coupling and adherence to the Open/Closed Principle. In Rust, this can be implemented using traits to define a factory interface and concrete types to implement specific object creation logic. Here’s an example of the Factory Method pattern in Rust:
 </p>
@@ -139,7 +139,7 @@ fn main() {
 In this code, the <code>Product</code> trait defines a common interface for products with a <code>describe</code> method. <code>ConcreteProductA</code> and <code>ConcreteProductB</code> implement this trait, representing different types of products. The <code>Creator</code> trait defines a <code>factory_method</code> that subclasses must implement to return a specific <code>Product</code>. <code>ConcreteCreatorA</code> and <code>ConcreteCreatorB</code> are concrete implementations of <code>Creator</code>, each returning an instance of a different product type through their <code>factory_method</code>. In the <code>main</code> function, the factory methods of the creators are called to instantiate and describe products. This setup demonstrates how the Factory Method pattern allows for the creation of objects through a flexible and extendable interface, enabling different product types to be instantiated depending on the creator used.
 </p>
 
-## 6.2.3. Abstract Factory
+### 6.2.3. Abstract Factory
 <p style="text-align: justify;">
 The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is used when a system needs to be independent of how its products are created, composed, and represented, ensuring that products from different families can work together seamlessly. In Rust, this can be implemented using traits to define abstract factories and their methods for creating products, along with concrete implementations for specific product families. Here’s an example of the Abstract Factory pattern in Rust:
 </p>
@@ -225,7 +225,7 @@ fn main() {
 In this code, <code>ProductA</code> and <code>ProductB</code> traits define interfaces for two types of products, while <code>AbstractFactory</code> provides methods for creating these products. <code>ConcreteFactory1</code> and <code>ConcreteFactory2</code> are concrete implementations of the <code>AbstractFactory</code>, each responsible for creating a specific set of product instances (<code>ConcreteProductA1</code>, <code>ConcreteProductB1</code>, <code>ConcreteProductA2</code>, <code>ConcreteProductB2</code>). In the <code>main</code> function, instances of <code>ConcreteFactory1</code> and <code>ConcreteFactory2</code> are used to create products and demonstrate how different families of products can be created through a common interface. This example illustrates the Abstract Factory pattern’s capability to ensure that products from different families are compatible and can be used interchangeably, depending on the factory implementation.
 </p>
 
-## 6.2.4. Builder
+### 6.2.4. Builder
 <p style="text-align: justify;">
 The Builder pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations. This pattern is useful for creating objects with many optional components or configurations while maintaining a clear and controlled construction process. In Rust, the Builder pattern can be implemented using a builder struct that accumulates configuration options and a method to build the final object. Here’s an example of the Builder pattern in Rust:
 </p>
@@ -285,7 +285,7 @@ fn main() {
 In this code, the <code>Car</code> struct represents the complex object being built, with fields for make, model, year, and an optional color. The <code>CarBuilder</code> struct provides a fluent interface for setting these fields. The <code>new</code> method initializes the builder with required fields (<code>make</code>, <code>model</code>, <code>year</code>), while the <code>set_color</code> method allows for setting the optional color. The <code>build</code> method constructs the final <code>Car</code> object using the accumulated settings from the builder. In the <code>main</code> function, the builder is used to create a <code>Car</code> instance with a specified color, demonstrating how the Builder pattern facilitates flexible and controlled object creation.
 </p>
 
-## 6.2.5. Prototypes
+### 6.2.5. Prototypes
 <p style="text-align: justify;">
 The Prototype pattern enables the creation of new objects by copying an existing object, known as the prototype, rather than constructing new instances from scratch. This pattern is particularly useful when the cost of creating a new instance is higher than copying an existing one, and it supports the creation of complex objects with similar characteristics. In Rust, the Prototype pattern can be implemented by defining a trait for cloning prototypes and then using concrete types that implement this trait. Here’s an example of the Prototype pattern in Rust:
 </p>
@@ -324,7 +324,7 @@ fn main() {
 In this code, the <code>Prototype</code> trait defines a <code>clone</code> method, which is responsible for creating a new instance by copying the existing one. <code>ConcretePrototype</code> is a struct that implements this trait, with the <code>clone</code> method creating a new <code>ConcretePrototype</code> with the same data. The <code>clone</code> method returns an <code>Rc<dyn Prototype></code> to enable reference counting and shared ownership. In the <code>main</code> function, an original instance of <code>ConcretePrototype</code> is created and cloned, demonstrating how the Prototype pattern allows for efficient object creation by copying an existing instance. This approach is beneficial when the creation of new instances involves complex setup or initialization.
 </p>
 
-# 6.3. Structural Patterns
+## 6.3. Structural Patterns
 <p style="text-align: justify;">
 Structural design patterns focus on the organization and composition of classes and objects, aiming to ensure that they fit together effectively and efficiently. These patterns are concerned with how to compose objects into larger structures while maintaining flexibility and ensuring that the components work seamlessly together. The purpose of structural patterns is to address issues related to the arrangement and integration of objects and classes, enhancing the overall design and manageability of complex systems.
 </p>
@@ -333,7 +333,7 @@ Structural design patterns focus on the organization and composition of classes 
 Among the key structural patterns are the Adapter, Bridge, Composite, Decorator, Facade, Flyweight, and Proxy patterns. The Adapter pattern allows incompatible interfaces to work together by converting one interface into another that clients expect. The Bridge pattern separates an abstraction from its implementation, enabling both to evolve independently. The Composite pattern facilitates the composition of objects into tree structures to represent part-whole hierarchies, treating individual objects and compositions uniformly. The Decorator pattern dynamically adds responsibilities to objects without altering their structure. The Facade pattern provides a simplified interface to a complex subsystem, making it easier to interact with. The Flyweight pattern reduces the cost of creating and managing a large number of similar objects by sharing common parts. Lastly, the Proxy pattern controls access to another object, providing a surrogate or placeholder that manages access and operations. These patterns collectively improve code organization and flexibility, making it easier to manage and extend complex systems.
 </p>
 
-## 6.3.1. Adapter
+### 6.3.1. Adapter
 <p style="text-align: justify;">
 The Adapter pattern allows incompatible interfaces to work together by converting the interface of a class into another interface that clients expect. This pattern is useful for integrating new code with existing code that was designed with a different interface. In Rust, the Adapter pattern can be implemented by defining a trait for the expected interface and creating an adapter struct that implements this trait while internally using an instance of a different type that has a different interface. Here’s an example of the Adapter pattern in Rust:
 </p>
@@ -376,7 +376,7 @@ fn main() {
 In this code, the <code>Target</code> trait defines the interface that the client expects, with a method <code>request</code>. <code>Adaptee</code> is a class with a different interface that provides a method <code>specific_request</code> which we want to adapt. The <code>Adapter</code> struct implements the <code>Target</code> trait and uses an instance of <code>Adaptee</code> internally. In the <code>request</code> method, the adapter translates the call to <code>specific_request</code> of <code>Adaptee</code>, thereby adapting its interface to the one expected by clients. In the <code>main</code> function, an instance of <code>Adaptee</code> is created and used through the <code>Adapter</code>, demonstrating how the Adapter pattern facilitates the integration of incompatible interfaces.
 </p>
 
-## 6.3.2. Bridge
+### 6.3.2. Bridge
 <p style="text-align: justify;">
 The Bridge pattern separates abstraction from implementation, allowing them to vary independently without affecting each other. This pattern is useful when you want to decouple an abstraction from its implementation so that both can evolve separately. In Rust, the Bridge pattern can be implemented by defining an abstraction trait and an implementation trait, then creating concrete types for both the abstraction and the implementation. Here’s an example of the Bridge pattern in Rust:
 </p>
@@ -435,7 +435,7 @@ fn main() {
 In this code, the <code>Implementor</code> trait defines the interface for the implementation part, with <code>operation_impl</code> as its method. <code>ConcreteImplementorA</code> and <code>ConcreteImplementorB</code> are concrete implementations of this trait, each providing a different behavior. The <code>Abstraction</code> trait defines the interface for the abstraction part, and <code>RefinedAbstraction</code> is a concrete type that holds a reference to an <code>Implementor</code> and uses it to perform its operations. The <code>operation</code> method of <code>RefinedAbstraction</code> delegates the actual work to the <code>Implementor</code>'s <code>operation_impl</code> method, thus bridging the gap between the abstraction and its implementation. In the <code>main</code> function, instances of both <code>ConcreteImplementorA</code> and <code>ConcreteImplementorB</code> are used with <code>RefinedAbstraction</code> to demonstrate how the Bridge pattern allows for flexible and independent evolution of both the abstraction and implementation layers.
 </p>
 
-## 6.3.3. Composite
+### 6.3.3. Composite
 <p style="text-align: justify;">
 The Composite pattern is designed to allow individual objects and compositions of objects to be treated uniformly, typically to represent part-whole hierarchies. This pattern enables clients to interact with individual objects and compositions of objects in the same way, making it easier to work with tree-like structures where both leaf nodes and composite nodes are handled consistently. In Rust, the Composite pattern is implemented by defining a component trait for both leaf and composite nodes, with concrete types for each. Here’s an example of the Composite pattern in Rust:
 </p>
@@ -485,7 +485,7 @@ fn main() {
 In this code, the <code>Component</code> trait defines a common interface for both leaf and composite nodes, with the <code>operation</code> method. The <code>Leaf</code> struct represents a leaf node in the hierarchy, providing its specific implementation of <code>operation</code>. The <code>Composite</code> struct represents a composite node that holds a collection of child components (which can be either <code>Leaf</code> or <code>Composite</code>). Its implementation of <code>operation</code> iterates over its children and accumulates their results. In the <code>main</code> function, instances of <code>Leaf</code> are created and added to a <code>Composite</code>, demonstrating how the Composite pattern allows for flexible management and interaction with hierarchical structures by treating both leaf and composite nodes uniformly.
 </p>
 
-## 6.3.4. Decorator
+### 6.3.4. Decorator
 <p style="text-align: justify;">
 The Decorator pattern allows for the dynamic addition of responsibilities to objects without altering their structure, by wrapping them with additional functionality. This pattern is useful for extending the behavior of objects in a flexible and reusable way. In Rust, the Decorator pattern is implemented by defining a base trait for the core functionality and creating decorator structs that also implement this trait, adding their own behavior before or after delegating to the original object. Here’s an example of the Decorator pattern in Rust:
 </p>
@@ -541,7 +541,7 @@ fn main() {
 In this code, the <code>Coffee</code> trait defines the core functionality with the <code>cost</code> method. <code>SimpleCoffee</code> is a concrete implementation of <code>Coffee</code>, representing a basic coffee. The <code>MilkDecorator</code> and <code>SugarDecorator</code> structs are decorators that enhance the behavior of the <code>Coffee</code> trait by adding costs for milk and sugar, respectively. Each decorator holds a reference to another <code>Coffee</code> instance, which it delegates to, adding its own cost to the result. In the <code>main</code> function, a <code>SimpleCoffee</code> instance is decorated first with <code>MilkDecorator</code> and then with <code>SugarDecorator</code>, demonstrating how the Decorator pattern allows for flexible composition of behaviors without altering the original <code>SimpleCoffee</code> implementation.
 </p>
 
-## 6.3.5. Facade
+### 6.3.5. Facade
 <p style="text-align: justify;">
 The Facade pattern provides a simplified interface to a complex subsystem, making it easier for clients to interact with the subsystem without needing to understand its intricate details. This pattern is useful for reducing complexity by encapsulating multiple components and providing a unified interface for their operations. In Rust, the Facade pattern is implemented by creating a facade struct that internally manages the interactions with various subsystem components, offering a simplified interface to the client. Here’s an example of the Facade pattern in Rust:
 </p>
@@ -604,7 +604,7 @@ fn main() {
 In this code, <code>SubsystemA</code>, <code>SubsystemB</code>, and <code>SubsystemC</code> represent complex subsystems with their respective operations. The <code>Facade</code> struct provides a simplified interface to these subsystems through its <code>unified_operation</code> method, which coordinates calls to the subsystems and aggregates their results. The <code>Facade</code> constructor initializes the subsystem components and offers a single entry point for client interactions. In the <code>main</code> function, an instance of <code>Facade</code> is created, and its <code>unified_operation</code> method is called to demonstrate how the Facade pattern simplifies interaction with the underlying subsystems, making the overall system easier to use and manage.
 </p>
 
-## 6.3.6. Flyweight
+### 6.3.6. Flyweight
 <p style="text-align: justify;">
 The Flyweight pattern is designed to efficiently support a large number of objects by sharing common state among them, thus reducing memory usage and improving performance. This pattern is particularly useful when objects share a significant amount of state, and only the unique aspects of each object need to be stored separately. In Rust, the Flyweight pattern can be implemented by defining a trait for the shared interface, creating concrete implementations that store shared state, and using a manager to handle the creation and reuse of these shared objects. Here’s an example of the Flyweight pattern in Rust:
 </p>
@@ -668,7 +668,7 @@ fn main() {
 In this code, the <code>Flyweight</code> trait defines the common interface for flyweight objects, while <code>ConcreteFlyweight</code> represents a concrete implementation that stores shared state. The <code>FlyweightFactory</code> manages the creation and reuse of <code>ConcreteFlyweight</code> instances, using a <code>HashMap</code> to keep track of created instances and a <code>Mutex</code> to ensure thread safety. The <code>get_flyweight</code> method either retrieves an existing <code>ConcreteFlyweight</code> with the given state or creates a new one if it does not already exist. In the <code>main</code> function, instances of <code>ConcreteFlyweight</code> are created and reused, demonstrating how the Flyweight pattern reduces memory usage by sharing instances with the same state, and showing the efficiency of managing a large number of objects with shared data.
 </p>
 
-## 6.3.7. Proxy
+### 6.3.7. Proxy
 <p style="text-align: justify;">
 The Proxy pattern provides a surrogate or placeholder for another object to control access to it, often adding additional functionality such as lazy initialization, access control, or logging. This pattern is useful for managing the interaction with a resource-intensive object or for enforcing access rules. In Rust, the Proxy pattern is implemented by defining a trait for the common interface, creating a real subject that implements this trait, and a proxy struct that also implements the trait but controls access to the real subject. Here’s an example of the Proxy pattern in Rust:
 </p>
@@ -724,7 +724,7 @@ fn main() {
 In this code, the <code>Subject</code> trait defines the interface for both the real subject and its proxy. The <code>RealSubject</code> struct provides the actual implementation of the <code>request</code> method. The <code>Proxy</code> struct, which also implements the <code>Subject</code> trait, initially does not have a <code>RealSubject</code> instance. It includes a method <code>load_real_subject</code> to initialize <code>RealSubject</code> when needed. In the <code>request</code> method, the proxy checks if the real subject is loaded and initializes it if necessary, then delegates the request to the real subject. In the <code>main</code> function, a <code>Proxy</code> instance is created, demonstrating how the Proxy pattern delays the instantiation of <code>RealSubject</code> until it is actually needed and controls access to it, which can be particularly useful for managing resource-intensive objects or adding additional behavior.
 </p>
 
-# 6.4. Behavioral Patterns
+## 6.4. Behavioral Patterns
 <p style="text-align: justify;">
 Behavioral design patterns focus on the interactions and responsibilities between objects, aiming to optimize the ways in which objects collaborate and communicate. These patterns address the complexity of object interactions by defining clear roles and responsibilities, thereby facilitating the management of dynamic and complex workflows. The primary purpose of behavioral patterns is to improve communication between objects, manage their interactions more effectively, and distribute responsibilities in a flexible manner.
 </p>
@@ -737,7 +737,7 @@ Rust’s enums and pattern matching offer powerful tools for implementing behavi
 Key behavioral patterns include the Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, and Template Method patterns. The Chain of Responsibility pattern allows a chain of objects to handle a request, giving each object a chance to process it or pass it along. The Command pattern encapsulates requests as objects, enabling parameterization and queuing. The Iterator pattern provides a way to access elements of an aggregate object sequentially without exposing its underlying representation. The Mediator pattern centralizes communication between objects, reducing their direct dependencies. The Memento pattern captures and restores an object's internal state without violating encapsulation. The Observer pattern defines a one-to-many dependency where changes in one object notify and update others. The State pattern allows an object to change its behavior when its internal state changes, and the Strategy pattern defines a family of algorithms, making them interchangeable. Finally, the Template Method pattern defines the skeleton of an algorithm, allowing subclasses to override specific steps without changing the algorithm’s structure. Each of these patterns helps manage complex interactions and responsibilities, contributing to more modular and maintainable systems.
 </p>
 
-## 6.4.1. Chain of Responsibility
+### 6.4.1. Chain of Responsibility
 <p style="text-align: justify;">
 The Chain of Responsibility pattern allows a request to pass through a chain of handlers, where each handler has the opportunity to process the request or pass it along to the next handler in the chain. This pattern decouples the sender of a request from its receiver, enabling multiple objects to handle the request in a flexible and extensible manner. In Rust, the Chain of Responsibility pattern is implemented by defining a trait for handling requests, creating concrete handler structs that implement this trait, and setting up a chain of handlers where each handler can either process the request or delegate it to the next handler in the chain. Here’s an example of the Chain of Responsibility pattern in Rust:
 </p>
@@ -825,7 +825,7 @@ fn main() {
 In this code, the <code>Handler</code> trait defines the interface for handling requests, including methods for setting the next handler in the chain and processing the request. <code>ConcreteHandlerA</code> and <code>ConcreteHandlerB</code> are concrete implementations of the <code>Handler</code> trait, each capable of handling specific requests and delegating others to the next handler. The <code>set_next</code> method establishes the chain by linking handlers together. In the <code>main</code> function, instances of <code>ConcreteHandlerA</code> and <code>ConcreteHandlerB</code> are created and linked, demonstrating how the Chain of Responsibility pattern allows requests to be processed by the appropriate handler in the chain or passed along if not handled.
 </p>
 
-## 6.4.2. Command
+### 6.4.2. Command
 <p style="text-align: justify;">
 The Command pattern encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations. This pattern separates the responsibility of issuing a request from the responsibility of executing it, enabling features like undo functionality, logging, and transactional behavior. In Rust, the Command pattern is implemented by defining a command trait with an <code>execute</code> method, creating concrete command structs that implement this trait, and an invoker that holds and executes these commands. Here’s an example of the Command pattern in Rust:
 </p>
@@ -879,7 +879,7 @@ fn main() {
 In this code, the <code>Command</code> trait defines the interface for command objects with an <code>execute</code> method. <code>LightOnCommand</code> and <code>LightOffCommand</code> are concrete implementations of this trait that encapsulate the operations to turn a light on or off. The <code>RemoteControl</code> struct acts as the invoker, holding a reference to a <code>Command</code> object and providing a method <code>press_button</code> to execute it. In the <code>main</code> function, instances of <code>LightOnCommand</code> and <code>LightOffCommand</code> are created, wrapped in <code>Box</code> to satisfy Rust’s trait object requirements, and passed to <code>RemoteControl</code> instances. The <code>press_button</code> method is then called to execute the commands, demonstrating how the Command pattern decouples command issuance from execution, allowing flexible and reusable command handling.
 </p>
 
-## 6.4.3. Iterator
+### 6.4.3. Iterator
 <p style="text-align: justify;">
 The Iterator pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. This pattern is especially useful for traversing complex data structures or collections in a uniform manner. In Rust, the Iterator pattern is implemented through the use of iterators, which are objects that implement the <code>Iterator</code> trait with methods like <code>next</code> to retrieve elements one by one. The <code>Iterator</code> trait is typically used with Rust's collections to enable easy and idiomatic iteration over elements. Here’s an example of the Iterator pattern in Rust:
 </p>
@@ -923,7 +923,7 @@ fn main() {
 In this code, <code>MyCollection</code> is a custom collection that holds a <code>Vec<i32></code>. The <code>IntoIterator</code> trait is implemented for <code>MyCollection</code>, which defines the associated <code>Item</code> type as <code>i32</code> and the <code>IntoIter</code> type as <code>std::vec::IntoIter<i32></code>. The <code>into_iter</code> method converts <code>MyCollection</code> into an iterator that iterates over its <code>items</code>. In the <code>main</code> function, a <code>MyCollection</code> instance is created, populated with integers, and then iterated over using a <code>for</code> loop. This demonstrates the Iterator pattern by abstracting the process of traversing the collection, allowing external code to access elements sequentially without needing to know about the internal structure of <code>MyCollection</code>.
 </p>
 
-## 6.4.4. Mediator
+### 6.4.4. Mediator
 <p style="text-align: justify;">
 The Mediator pattern defines an object that encapsulates how a set of objects interact, promoting loose coupling by preventing objects from referring to each other explicitly. This pattern centralizes communication between objects, allowing them to exchange information indirectly through the mediator, thus simplifying interactions and enhancing flexibility. In Rust, the Mediator pattern is implemented by defining a mediator trait with methods for communication, creating concrete mediator structs that implement this trait, and having components interact with each other through the mediator rather than directly. Here’s an example of the Mediator pattern in Rust:
 </p>
@@ -1011,7 +1011,7 @@ fn main() {
 In this code, the <code>Mediator</code> trait defines the interface for the mediator with a <code>notify</code> method to handle communication between components. <code>ConcreteMediator</code> is a specific implementation of this trait that manages interactions between <code>Component1</code> and <code>Component2</code>. Each component holds a reference to the mediator and uses it to notify the mediator about events. When a component handles an event, it triggers the mediator to notify other components based on predefined rules. The <code>main</code> function demonstrates this pattern by creating instances of components and a mediator, then initiating communication through the mediator, showcasing how the Mediator pattern centralizes and simplifies interactions among components.
 </p>
 
-## 6.4.5. Memento
+### 6.4.5. Memento
 <p style="text-align: justify;">
 The Memento pattern is used to capture and externalize an object's internal state without violating encapsulation, allowing the object to be restored to this state later. This pattern is particularly useful for implementing undo functionality or saving the state of an object at specific points in time. In Rust, the Memento pattern is implemented by creating a memento struct to hold the state, a caretaker to manage the memento, and an originator that creates and restores the memento. Here’s an example of the Memento pattern in Rust:
 </p>
@@ -1092,7 +1092,7 @@ fn main() {
 In this code, <code>Memento</code> is a struct that stores the state of the <code>Originator</code>. The <code>Originator</code> struct can create a memento of its current state using the <code>create_memento</code> method and restore its state from a memento using the <code>restore_from_memento</code> method. <code>Caretaker</code> manages the memento, allowing it to save and restore the state. The <code>main</code> function demonstrates how the <code>Originator</code> can change its state, save this state via <code>Caretaker</code>, and then restore it later. This example illustrates the Memento pattern by showing how an object’s state can be preserved and restored without exposing its internal details, enabling features such as undo functionality.
 </p>
 
-## 6.4.6. Observer
+### 6.4.6. Observer
 <p style="text-align: justify;">
 The Observer pattern defines a one-to-many dependency between objects, where a change in one object (the subject) automatically updates all dependent objects (observers) without the subject needing to know who or how many observers are involved. This pattern is useful for implementing distributed event-handling systems, where multiple parts of a program need to respond to changes in state. In Rust, the Observer pattern can be implemented using traits and structs to represent subjects and observers. Here’s an example of the Observer pattern in Rust:
 </p>
@@ -1157,7 +1157,7 @@ fn main() {
 In this code, <code>Observer</code> is a trait that defines the <code>update</code> method, which observers must implement to handle state changes. The <code>Subject</code> struct maintains a list of observers and notifies them whenever its state changes by calling <code>notify_observers</code>. The <code>ConcreteObserver</code> struct implements the <code>Observer</code> trait and defines how it reacts to state updates. In the <code>main</code> function, two <code>ConcreteObserver</code> instances are created and registered with a <code>Subject</code>. When the state of the <code>Subject</code> is changed using <code>set_state</code>, all registered observers are notified of the new state through their <code>update</code> method. This example demonstrates the Observer pattern by showing how multiple observers can respond to changes in a subject, facilitating a decoupled and flexible event-handling mechanism.
 </p>
 
-## 6.4.7. State
+### 6.4.7. State
 <p style="text-align: justify;">
 The State pattern allows an object to alter its behavior when its internal state changes, effectively enabling it to appear as if it has changed its class. This pattern is useful for managing state-dependent behavior in an object without resorting to complex conditional statements. In Rust, the State pattern is typically implemented by defining a set of state structs that implement a common trait, and having a context struct that holds a reference to the current state. Here’s an example of the State pattern in Rust:
 </p>
@@ -1217,7 +1217,7 @@ fn main() {
 In this code, the <code>State</code> trait defines a <code>handle</code> method that different states must implement. The <code>Context</code> struct contains a <code>Box<dyn State></code> to hold the current state and has methods to change states and request handling. <code>ConcreteStateA</code> and <code>ConcreteStateB</code> are specific implementations of the <code>State</code> trait, each providing its own behavior for the <code>handle</code> method. In the <code>main</code> function, a <code>Context</code> object is initially set with <code>ConcreteStateA</code>. When <code>request</code> is called, the behavior corresponding to <code>ConcreteStateA</code> is executed. The state is then changed to <code>ConcreteStateB</code>, and calling <code>request</code> again triggers the behavior of <code>ConcreteStateB</code>. This example illustrates the State pattern by showing how the <code>Context</code> object delegates its behavior to its current state, enabling dynamic changes in behavior based on state transitions.
 </p>
 
-## 6.4.8. Strategy
+### 6.4.8. Strategy
 <p style="text-align: justify;">
 The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable, allowing the algorithm to vary independently from the clients that use it. This pattern is useful for choosing an algorithm's behavior at runtime, providing flexibility to select and switch strategies without altering the client code. In Rust, the Strategy pattern is implemented by creating a trait for the strategy and different structs that implement this trait, with the context struct using a trait object to delegate strategy-specific operations. Here’s an example of the Strategy pattern in Rust:
 </p>
@@ -1277,7 +1277,7 @@ fn main() {
 In this code, the <code>Strategy</code> trait defines a common interface with the <code>execute</code> method that different strategies implement. The <code>Context</code> struct holds a reference to a <code>Box<dyn Strategy></code>, allowing it to use any strategy that conforms to the <code>Strategy</code> trait. <code>ConcreteStrategyA</code> and <code>ConcreteStrategyB</code> are implementations of the <code>Strategy</code> trait, each providing its own version of the <code>execute</code> method. In the <code>main</code> function, a <code>Context</code> is initialized with <code>ConcreteStrategyA</code>, and its <code>do_work</code> method executes the behavior defined by this strategy. The strategy is then switched to <code>ConcreteStrategyB</code>, and the <code>do_work</code> method is called again, demonstrating how the behavior can be dynamically changed based on the strategy used. This example shows how the Strategy pattern enables flexible and interchangeable algorithms within a client context.
 </p>
 
-## 6.4.9. Template Method
+### 6.4.9. Template Method
 <p style="text-align: justify;">
 The Template Method pattern defines the skeleton of an algorithm in a base class, but lets subclasses override specific steps of the algorithm without changing its structure. This pattern allows you to implement invariant parts of an algorithm once in the base class while allowing subclasses to provide specific implementations for certain steps. In Rust, this pattern can be implemented using traits and structs, where a base trait defines the template method and the steps, and concrete structs implement the specific steps. Here’s an example of the Template Method pattern in Rust:
 </p>
@@ -1342,7 +1342,7 @@ fn main() {
 In this code, the <code>TemplateMethod</code> trait defines the <code>template_method</code>, which outlines the sequence of steps (<code>step1</code>, <code>step2</code>, and <code>step3</code>) for the algorithm. The <code>ConcreteClassA</code> and <code>ConcreteClassB</code> structs implement the <code>TemplateMethod</code> trait, providing specific behaviors for each step of the algorithm. The <code>template_method</code> is defined in the trait and calls the steps in a fixed order, while the actual implementation of each step is provided by the concrete classes. In the <code>main</code> function, instances of <code>ConcreteClassA</code> and <code>ConcreteClassB</code> are created, and their <code>template_method</code> is called to execute the algorithm with different implementations. This example illustrates how the Template Method pattern allows for the definition of an algorithm's structure while permitting flexibility in the specific steps through subclass implementations.
 </p>
 
-# 6.5. Applying GOF in Rust
+## 6.5. Applying GOF in Rust
 <p style="text-align: justify;">
 Applying Gang of Four (GoF) design patterns in Rust involves leveraging the patterns' general principles while adapting them to Rust’s unique language features. Rust's distinct characteristics, such as its ownership model, strict type system, and concurrency features, provide a different context for implementing these patterns compared to traditional object-oriented languages. Understanding how to align GoF patterns with Rust’s paradigms can significantly enhance the effectiveness of design solutions within Rust projects.
 </p>
@@ -1359,7 +1359,7 @@ The relevance of GoF patterns in modern Rust applications is particularly pronou
 In summary, applying GoF patterns in Rust involves adapting their core concepts to work harmoniously with Rust’s unique features, such as its ownership model, concurrency mechanisms, and type safety guarantees. By doing so, Rust programmers can implement robust, efficient, and maintainable designs that take full advantage of Rust's strengths while adhering to the timeless principles of the GoF patterns. This adaptation not only preserves the patterns’ intended benefits but also enhances their applicability in modern software development contexts, ensuring that Rust projects remain effective and reliable.
 </p>
 
-## 6.5.1. Case Studies and Examples
+### 6.5.1. Case Studies and Examples
 <p style="text-align: justify;">
 Exploring case studies and practical examples where Gang of Four (GoF) design patterns have been effectively utilized in Rust projects provides valuable insights into how these patterns can be adapted to the language's unique features and constraints. Rust's emphasis on safety, concurrency, and performance makes it a compelling environment for applying GoF patterns, with several real-world examples showcasing their successful integration into Rust-based systems.
 </p>
@@ -1384,7 +1384,7 @@ Additionally, the Builder pattern has been effectively used in Rust to manage th
 These case studies illustrate how GoF patterns can be adapted to Rust’s unique programming model, leveraging its features to address design challenges effectively. By integrating these patterns, Rust projects benefit from enhanced flexibility, maintainability, and safety, demonstrating the enduring relevance and adaptability of GoF design principles in modern software development contexts.
 </p>
 
-## 6.5.2. Simple Calculator Program
+### 6.5.2. Simple Calculator Program
 <p style="text-align: justify;">
 Lets reimplement the simple calculator program in Chapter 5.9.1 using the Gang of Four (GOF) design patterns. We utilize several classic patterns such as <strong>Factory Method</strong>, <strong>Composite</strong>, <strong>Interpreter</strong>, and <strong>Visitor</strong> to ensure quality, maintainability, and extensibility. These patterns will help structure the program in a modular and scalable way, adhering to well-established object-oriented design principles.
 </p>
@@ -1623,12 +1623,12 @@ In this implementation, we incorporate several GOF design patterns to structure 
 This implementation showcases how GOF design patterns and SOLID design principles can be used to structure complex applications in a clean and maintainable way. The use of patterns like Composite, Visitor, and Factory Method allows for flexible and extensible designs, making it easier to add new features and operations. The code adheres to principles of separation of concerns and encapsulation, ensuring that each component has a well-defined role and interface.
 </p>
 
-# 6.6. Conclusion
+## 6.6. Conclusion
 <p style="text-align: justify;">
 Exploring each Gang of Four design pattern in detail is essential for mastering their implementation in Rust and other languages, as it deepens your understanding of their practical applications and nuances. Each pattern offers unique solutions to common design problems, and diving into their specifics helps you grasp how to leverage Rust’s features effectively to enhance your software design. As Rust’s features like ownership, traits, and concurrency impact how patterns are applied, a thorough exploration of each pattern will provide valuable insights into writing clean, efficient, and maintainable code. Continued study through additional resources or subsequent chapters will enable you to refine your skills, address complex design challenges, and apply these patterns adeptly in various scenarios.
 </p>
 
-## 6.6.1. Advices
+### 6.6.1. Advices
 <p style="text-align: justify;">
 Implementing Gang of Four (GoF) design patterns in Rust requires a deep understanding of Rust's unique features, such as ownership, borrowing, and its trait-based system, to ensure that the patterns are used effectively while preventing bad code and code smells.
 </p>
@@ -1656,7 +1656,7 @@ Implementing Gang of Four (GoF) design patterns in Rust requires a deep understa
 Overall, applying GoF design patterns in Rust requires leveraging the language’s unique features to address common design challenges effectively. By understanding and utilizing Rust’s ownership model, trait system, enums, and concurrency capabilities, you can implement these patterns in a way that maintains elegance, efficiency, and code quality.
 </p>
 
-## 6.6.2. Further Learning with GenAI
+### 6.6.2. Further Learning with GenAI
 <p style="text-align: justify;">
 Run the following prompts with ChatGPT and Gemini to deepen your understanding and gain valuable insights. Think of GenAI as a vast library: the more time you spend exploring it, the more knowledge you'll acquire.
 </p>

@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 35.1. Introduction to CQRS
+## 35.1. Introduction to CQRS
 <p style="text-align: justify;">
 Command Query Responsibility Segregation (CQRS) is an architectural pattern that separates the concerns of handling commands and queries into distinct models, allowing for greater scalability, flexibility, and optimization in software systems. At its core, CQRS divides the operations of a system into two distinct categories: commands and queries. Commands are operations that modify the state of the system, such as creating, updating, or deleting data. Queries, on the other hand, are operations that retrieve data without altering the state. This separation allows for a more tailored approach to handling each type of operation, which can lead to improved performance, scalability, and maintainability of the system.
 </p>
@@ -54,7 +54,7 @@ In addition to its technical benefits, CQRS can also improve the maintainability
 Overall, CQRS represents a powerful pattern for managing complex systems where the separation of command and query responsibilities can lead to significant gains in performance, scalability, and maintainability. As software systems continue to evolve and grow in complexity, understanding and implementing CQRS can provide valuable benefits and insights into effective system design and architecture.
 </p>
 
-# 35.2. Core Concepts and Architecture
+## 35.2. Core Concepts and Architecture
 <p style="text-align: justify;">
 The CQRS (Command Query Responsibility Segregation) pattern is composed of several key components, each playing a crucial role in its architecture. Understanding these components—commands, queries, aggregates, and projections—is essential to implementing CQRS effectively, especially within the context of Rust, a language known for its robustness and safety.
 </p>
@@ -79,7 +79,7 @@ Rust’s type system and concurrency model offer robust support for implementing
 In summary, the CQRS pattern involves a clear division of responsibilities between commands, queries, aggregates, and projections. This separation enhances scalability, performance, and maintainability of systems. When combined with event sourcing and other architectural patterns, CQRS provides a comprehensive approach to managing complex data and business logic. Rust’s features and capabilities align well with these principles, offering a solid foundation for implementing CQRS effectively.
 </p>
 
-# 35.3. Implementing CQRS in Rust
+## 35.3. Implementing CQRS in Rust
 <p style="text-align: justify;">
 Implementing the Command Query Responsibility Segregation (CQRS) pattern in Rust involves designing and organizing your code to handle commands and queries separately while leveraging Rust's powerful type system and concurrency features. This section will provide an overview of implementing a simple CQRS example in Rust, followed by a detailed explanation of best practices, including the use of recommended crates and efficient handling of commands and queries.
 </p>
@@ -230,7 +230,7 @@ In this enhanced implementation, <code>actix_web</code> is used to create an HTT
 By leveraging Rust’s type system, recommended crates, and best practices for asynchronous programming, the CQRS pattern can be implemented effectively to create a robust, scalable, and maintainable system. This approach ensures that commands and queries are managed separately, optimizing performance and clarity while adhering to the principles of CQRS.
 </p>
 
-# 35.4. Command Handling
+## 35.4. Command Handling
 <p style="text-align: justify;">
 Implementing CQRS command handling in Rust involves a structured approach to managing commands that modify the state of the system. This section covers simple use cases of CQRS command handling, followed by an in-depth explanation of best practices, including validation, execution, and handling side effects. It will also explore integrating command handlers with aggregates.
 </p>
@@ -406,7 +406,7 @@ The <code>UserAggregate</code> encapsulates the logic for applying create and up
 In summary, implementing CQRS command handling in Rust involves defining commands, handling them through command handlers, and integrating with aggregates. Best practices such as validation, execution, and handling side effects enhance the robustness of the system. By leveraging Rust’s type system and its powerful concurrency features, developers can create efficient and reliable command handling mechanisms that align with CQRS principles.
 </p>
 
-# 35.5. Query Handling and Projections
+## 35.5. Query Handling and Projections
 <p style="text-align: justify;">
 Query handling and projections in a CQRS system focus on efficiently retrieving and presenting data to fulfill user queries. This section covers the basic implementation of query handling and projections using Rust, and then revisits the implementation with best practices such as strategies for creating and maintaining read models, efficient query processing, and leveraging Rust crates for database interactions.
 </p>
@@ -573,7 +573,7 @@ In this revised <code>TaskProjection</code>, the <code>Insertable</code> and <co
 In summary, implementing CQRS query handling and projections in Rust involves defining queries, maintaining projections, and ensuring efficient data retrieval. By using Rust crates like <code>diesel</code> for database interactions and applying best practices for query processing, developers can create performant and maintainable systems that effectively support complex query requirements.
 </p>
 
-# 35.6. Integration to Event Sourcing
+## 35.6. Integration to Event Sourcing
 <p style="text-align: justify;">
 Integrating CQRS with event sourcing creates a powerful architecture for handling complex systems where both read and write concerns are managed separately, and the system’s state is reconstructed from a series of events. This section provides an overview of how to integrate CQRS with event sourcing, followed by an in-depth exploration of implementation in Rust, including managing event stores and projections.
 </p>
@@ -792,7 +792,7 @@ This implementation demonstrates how events are handled, saved, and used to upda
 In summary, integrating CQRS with event sourcing in Rust involves defining and handling events, managing event stores, and maintaining projections. By employing best practices for event management and leveraging Rust crates for database interactions, developers can build robust systems that effectively manage both command and query responsibilities.
 </p>
 
-# 35.7. Consistency and Performance Considerations
+## 35.7. Consistency and Performance Considerations
 <p style="text-align: justify;">
 In a CQRS architecture, managing data consistency and optimizing performance are crucial for ensuring that the system operates efficiently and reliably. This section delves into how to handle consistency and performance considerations in CQRS implementations using Rust, including ensuring data consistency, optimizing performance, and dealing with eventual consistency issues.
 </p>
@@ -961,7 +961,7 @@ In this example, <code>update_projections_on_event</code> handles events asynchr
 In summary, managing consistency and optimizing performance in a CQRS system involves ensuring accurate synchronization between command and query sides, optimizing data storage and retrieval, and addressing eventual consistency challenges. By applying best practices such as efficient event storage, asynchronous processing, and real-time updates, developers can build robust and scalable CQRS implementations in Rust.
 </p>
 
-# 35.8. Testing and Validation
+## 35.8. Testing and Validation
 <p style="text-align: justify;">
 Testing and validation are crucial aspects of developing robust CQRS (Command Query Responsibility Segregation) systems. Effective testing ensures that the command, query, and projection components of the CQRS architecture function correctly and consistently. Validation ensures that commands and queries adhere to expected formats and business rules. This section explores testing strategies and validation methods for CQRS implementations in Rust and provides practical examples.
 </p>
@@ -1155,12 +1155,12 @@ In this implementation, <code>test_create_task_command_validation</code> verifie
 In summary, testing and validating CQRS implementations in Rust involve ensuring that commands and queries are correctly processed and adhere to expected formats and business rules. By employing unit tests, integration tests, and validation techniques, developers can build robust CQRS systems that maintain data integrity and deliver reliable performance.
 </p>
 
-# 35.10. Conclusion
+## 35.10. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Command Query Responsibility Segregation (CQRS) pattern is crucial for modern software architecture as it addresses the separation of concerns between data modification and retrieval, enabling optimized performance and scalability. CQRS enhances system flexibility by allowing different models and strategies for handling commands and queries, thus facilitating more efficient and tailored processing. This pattern is particularly relevant in complex domains where different operations have distinct performance and consistency requirements. As software systems evolve, especially with the rise of microservices and distributed architectures, CQRS continues to gain traction due to its ability to scale and adapt to varying demands. In the context of Rust, future trends will likely see deeper integration with asynchronous programming models, advanced tooling, and improved libraries that support robust CQRS implementations, further leveraging Rust's strengths in concurrency and type safety to build scalable and resilient systems.
 </p>
 
-## 35.10.1. Advices
+### 35.10.1. Advices
 <p style="text-align: justify;">
 Implementing the Command Query Responsibility Segregation (CQRS) pattern in Rust requires a nuanced approach to design and code structure, leveraging Rust’s strengths in type safety and concurrency to create an elegant and efficient system. At the core of CQRS is the separation of command and query responsibilities, which allows you to tailor the performance and scalability characteristics of each operation independently. To achieve this in Rust, you should focus on designing a robust architecture where commands modify the state and queries retrieve data, each optimized for its specific role.
 </p>
@@ -1189,7 +1189,7 @@ Lastly, consider future-proofing your CQRS implementation by keeping an eye on e
 By adhering to these principles, you can create a CQRS implementation in Rust that is both elegant and efficient, avoiding common pitfalls and ensuring a clean, maintainable codebase that leverages Rust’s strengths in type safety and concurrency.
 </p>
 
-## 35.10.2. Further Learning with GenAI
+### 35.10.2. Further Learning with GenAI
 <p style="text-align: justify;">
 To gain a deeper technical understanding of the Command Query Responsibility Segregation (CQRS) pattern, consider the following prompts designed to explore the pattern's intricacies, implementation details, and Rust-specific considerations:
 </p>

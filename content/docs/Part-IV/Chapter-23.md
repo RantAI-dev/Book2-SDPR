@@ -24,7 +24,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 23.1. Introduction to Proxy Pattern
+## 23.1. Introduction to Proxy Pattern
 <p style="text-align: justify;">
 The Proxy pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. The core idea behind this pattern is to introduce an intermediary between the client and the real object, allowing for additional functionalities to be added to the interaction without altering the real object's interface. This pattern is particularly useful when dealing with objects that are costly to create or manipulate, or when there is a need to enforce access control or add extra features such as logging, caching, or lazy initialization.
 </p>
@@ -45,7 +45,7 @@ The significance of the Proxy pattern in controlling access and extending functi
 Overall, the Proxy pattern serves as a powerful tool in software design, enabling developers to manage interactions with objects in a flexible and controlled manner. Its ability to encapsulate additional logic and manage complex scenarios makes it a valuable pattern for building robust and maintainable systems, especially in environments that demand careful control over resources and access.
 </p>
 
-# 23.2. Conceptual Foundations
+## 23.2. Conceptual Foundations
 <p style="text-align: justify;">
 The Proxy pattern is built upon key principles that focus on controlling access to an object and augmenting its behavior. At its core, the Proxy pattern involves creating a proxy object that stands in for the real subject. This proxy controls access to the real subject by managing interactions between the client and the actual object. The proxy can introduce additional functionality such as access control, lazy initialization, logging, or caching, thereby providing a flexible means to enhance or modify the behavior of the real subject without changing its underlying implementation.
 </p>
@@ -78,7 +78,7 @@ However, there are also some disadvantages to consider. The introduction of a pr
 Overall, the Proxy pattern is a powerful tool for controlling access and augmenting the behavior of objects in Rust. By understanding its principles, distinguishing it from other structural patterns, and weighing its advantages and disadvantages, developers can effectively utilize the Proxy pattern to build flexible and maintainable systems.
 </p>
 
-# 23.3. Proxy Pattern in Rust
+## 23.3. Proxy Pattern in Rust
 <p style="text-align: justify;">
 Implementing the Proxy pattern in Rust involves leveraging Rust's strong type system, ownership model, and concurrency features to effectively manage interactions between proxy objects and their real subjects. The implementation typically revolves around defining traits and structs to handle the delegation of calls and managing proxy-specific concerns such as ownership, borrowing, and lifetimes.
 </p>
@@ -182,12 +182,12 @@ fn main() {
 In summary, implementing the Proxy pattern in Rust involves defining a common trait, creating real subject and proxy structs, and managing interactions while adhering to Rust’s ownership and borrowing rules. By leveraging traits and structs, Rust allows for a robust and type-safe implementation of the Proxy pattern, providing flexibility in managing object interactions and extending functionality.
 </p>
 
-# 23.4. Advanced Techniques for Proxy in Rust
+## 23.4. Advanced Techniques for Proxy in Rust
 <p style="text-align: justify;">
 Advanced implementation of the Proxy pattern in Rust often involves handling shared state and concurrency, which can be achieved using Rust’s <code>Rc</code>, <code>Arc</code>, and <code>Mutex</code> types. These tools facilitate safe and efficient management of state across multiple parts of a program. Additionally, implementing various types of proxies, including Virtual Proxy, Remote Proxy, and Protection Proxy, requires a deep understanding of Rust’s concurrency model and its asynchronous programming capabilities.
 </p>
 
-## 23.4.1. Using Rc, Arc, and Mutex
+### 23.4.1. Using Rc, Arc, and Mutex
 <p style="text-align: justify;">
 In Rust, <code>Rc</code> (Reference Counted) and <code>Arc</code> (Atomic Reference Counted) are used to manage shared ownership of objects. <code>Rc</code> is suitable for single-threaded contexts, while <code>Arc</code> is designed for concurrent programming, allowing multiple threads to share ownership of a value. When implementing a proxy, these types can be crucial for managing shared state.
 </p>
@@ -266,7 +266,7 @@ fn main() {
 In this example, <code>CachedProxy</code> uses <code>Arc<Mutex<RealResource>></code> to manage access to a <code>RealResource</code> object and <code>Arc<Mutex<Option<String>>></code> for caching. The <code>get_data</code> method first checks the cache and retrieves data from the real resource if the cache is empty, ensuring safe concurrent access to the cache and resource.
 </p>
 
-## 23.4.2. Implementing Different Types of Proxies
+### 23.4.2. Implementing Different Types of Proxies
 <p style="text-align: justify;">
 A Virtual Proxy controls access to an object that is expensive to create. The proxy delays the creation of the real object until it is needed. This can be implemented using Rust’s <code>Option</code> type to represent the potential lazily initialized real object. For instance:
 </p>
@@ -329,7 +329,7 @@ impl ProtectionProxy {
     }
 }
 {{< /prism >}}
-## 23.4.3. Adapting Proxy Pattern for Async and Concurrent Programming
+### 23.4.3. Adapting Proxy Pattern for Async and Concurrent Programming
 <p style="text-align: justify;">
 In modern applications, particularly those involving I/O operations or web requests, asynchronous programming is crucial. Rust provides the <code>async</code> and <code>await</code> syntax for handling asynchronous operations. Implementing proxies in an asynchronous context requires handling asynchronous method calls and ensuring that the proxy manages these calls properly.
 </p>
@@ -382,7 +382,7 @@ In this example, <code>AsyncProxy</code> uses <code>Arc<Mutex<RealService>></cod
 Overall, advanced techniques for implementing the Proxy pattern in Rust involve managing shared state and concurrency with <code>Rc</code>, <code>Arc</code>, and <code>Mutex</code>, and adapting proxies to different use cases like Virtual, Remote, and Protection Proxies. Handling asynchronous operations with <code>async</code>/<code>await</code> ensures that proxies can manage concurrency efficiently, making the Proxy pattern versatile and applicable to various complex scenarios.
 </p>
 
-# 23.5. Practical Implementation of Proxy in Rust
+## 23.5. Practical Implementation of Proxy in Rust
 <p style="text-align: justify;">
 Implementing the Proxy pattern in Rust involves a series of well-defined steps, from defining the common interface to creating proxy objects that manage interactions with real subjects. In real-world Rust applications, proxies can be used to handle various scenarios such as lazy initialization, access control, and resource management. This section provides a step-by-step guide to implementing the Proxy pattern, offers practical examples, and highlights best practices for designing and using proxies effectively.
 </p>
@@ -452,7 +452,7 @@ fn main() {
     proxy.perform_operation(); // Executes operation through RealResource
 }
 {{< /prism >}}
-## 23.5.1. Examples and Best Practices of Proxy Pattern
+### 23.5.1. Examples and Best Practices of Proxy Pattern
 <p style="text-align: justify;">
 In real-world Rust applications, the Proxy pattern can be applied to various scenarios. For instance:
 </p>
@@ -470,7 +470,7 @@ When designing and using proxies in Rust, consider the following best practices:
 - <p style="text-align: justify;"><strong>Thread Safety:</strong> When using proxies in concurrent scenarios, ensure that shared state is properly managed. Use synchronization primitives like <code>Mutex</code> or <code>RwLock</code> when necessary to avoid data races and ensure thread safety.</p>
 - <p style="text-align: justify;"><strong>Resource Management:</strong> Be mindful of resource management, especially when proxies are used to manage resources like file handles or network connections. Ensure that resources are properly released when no longer needed.</p>
 - <p style="text-align: justify;"><strong>Code Complexity:</strong> Avoid over-complicating the proxy implementation. Proxies should be used to manage specific concerns such as access control or lazy initialization. Complex logic should be avoided to maintain readability and maintainability.</p>
-## 23.5.2. Sample Implementation Codes
+### 23.5.2. Sample Implementation Codes
 <p style="text-align: justify;">
 Here’s an example demonstrating a Proxy pattern implementation for a caching proxy that manages a resource-intensive computation:
 </p>
@@ -543,7 +543,7 @@ In this example, <code>CachingProxy</code> uses <code>Arc<Mutex<RealComputation>
 By following these guidelines and implementing proxies with attention to performance and thread safety, you can effectively leverage the Proxy pattern in Rust to create robust and maintainable applications.
 </p>
 
-# 23.6. Proxy and Modern Rust Ecosystem
+## 23.6. Proxy and Modern Rust Ecosystem
 <p style="text-align: justify;">
 Implementing the Proxy pattern in Rust can be significantly enhanced by leveraging Rust crates and libraries that integrate seamlessly with Rust’s type system, error handling, and concurrency features. This integration ensures that proxies are robust, maintainable, and capable of handling complex use cases in large-scale projects.
 </p>
@@ -582,12 +582,12 @@ Maintaining and evolving proxies in large-scale Rust projects involves several s
 By leveraging Rust’s crates and libraries, integrating with Rust’s type system and error handling, and following best practices for maintaining and evolving proxies, you can build robust and scalable proxy implementations. These practices ensure that proxies are not only functional but also adaptable and maintainable in complex and dynamic Rust projects.
 </p>
 
-# 23.7. Conclusion
+## 23.7. Conclusion
 <p style="text-align: justify;">
 Understanding and applying the Proxy pattern is crucial in modern software architecture due to its ability to manage access to complex objects and extend functionality without altering the original objects. By decoupling the client from the real subject, the Proxy pattern enhances modularity, control, and security, which are essential for maintaining scalable and maintainable systems. In Rust, the pattern leverages the language's strengths, such as ownership and concurrency mechanisms, to manage proxies efficiently and safely. Looking ahead, as Rust continues to evolve and integrate with more complex systems, the Proxy pattern will increasingly benefit from Rust's advanced features, like asynchronous programming and refined concurrency support, to address new challenges in distributed and high-performance environments. This evolving landscape will demand innovative applications of the Proxy pattern to ensure robust and adaptable software solutions.
 </p>
 
-## 23.7.1. Advices
+### 23.7.1. Advices
 <p style="text-align: justify;">
 Implementing the Proxy pattern in Rust requires a nuanced understanding of both the pattern itself and Rust's unique system of ownership, borrowing, and concurrency. The Proxy pattern essentially involves creating a surrogate or placeholder object that controls access to another object, referred to as the "real subject." In Rust, the primary challenge is to leverage the language's features—such as ownership and borrowing rules—while maintaining the pattern's benefits of access control and additional functionality.
 </p>
@@ -612,7 +612,7 @@ To prevent bad code and code smells, focus on clear separation of concerns. The 
 In practice, be vigilant about potential pitfalls such as improper reference management, excessive indirection, and performance overhead. Regularly review and refactor your proxy implementations to align with best practices and adapt to evolving requirements. Rust’s type system and concurrency primitives provide powerful tools for implementing the Proxy pattern robustly, but they require careful and precise usage to fully leverage their advantages while mitigating common issues.
 </p>
 
-## 23.7.2. Further Learning with GenAI
+### 23.7.2. Further Learning with GenAI
 <p style="text-align: justify;">
 To gain a thorough understanding of the Proxy design pattern in Rust, consider exploring the following prompts, each designed to delve into specific aspects of the pattern and its application in Rust:
 </p>

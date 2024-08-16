@@ -25,7 +25,7 @@ toc: true
 </p>
 {{% /alert %}}
 
-# 5.1. Introduction to SOLID
+## 5.1. Introduction to SOLID
 <p style="text-align: justify;">
 In the realm of software engineering, SOLID principles stand as a cornerstone for crafting robust and maintainable systems. These principles, which emerged from the work of Robert C. Martin and others, encapsulate a set of guidelines aimed at improving code quality and ensuring that software can evolve gracefully over time. Chapter 5 of "Software Design and Programming Resources" (SDPR) delves into these principles, offering a comprehensive introduction to their significance and application.
 </p>
@@ -47,7 +47,7 @@ Chapter 5 of SDPR also addresses some common misconceptions about SOLID, clarify
 In the context of Rust, SOLID principles find a natural alignment with the language's features. Rust's strong emphasis on safety, concurrency, and modularity supports these design guidelines, providing a foundation for implementing SOLID principles effectively. Rust’s ownership model and type system facilitate adherence to SRP, while its trait system and generics align with OCP and DIP. As subsequent chapters will explore in greater detail, Rust's design encourages a structured approach to software engineering that complements the SOLID principles, promoting both robust and maintainable code.
 </p>
 
-# 5.2. The Purpose of SOLID Principles
+## 5.2. The Purpose of SOLID Principles
 <p style="text-align: justify;">
 The SOLID principles serve a pivotal role in software design, primarily aiming to enhance maintainability and scalability, reduce complexity and dependency, and encourage clean and readable code. Each of these objectives contributes significantly to the overall quality and longevity of software systems.
 </p>
@@ -80,7 +80,7 @@ The SOLID principles also promote best practices in code organization and docume
 In summary, the SOLID principles provide a framework for designing software that is maintainable, scalable, and manageable. By focusing on these objectives, developers can create systems that are robust and adaptable, reducing complexity and fostering a clean, readable codebase. These principles guide developers in building high-quality software that stands the test of time and meets evolving requirements with agility and efficiency.
 </p>
 
-# 5.3. Single Responsibility Principle (SRP)
+## 5.3. Single Responsibility Principle (SRP)
 <p style="text-align: justify;">
 The Single Responsibility Principle (SRP) is a core tenet of software design that emphasizes that a class or module should have only one reason to change. This principle is crucial for creating maintainable and understandable code, as it ensures that each component of a system addresses a single, well-defined task. By adhering to SRP, developers can reduce the complexity of their code, making it easier to test and modify without inadvertently affecting other parts of the system.
 </p>
@@ -151,7 +151,7 @@ In this refactored version, <code>UserManager</code> handles user data managemen
 We will delve deeper into the Single Responsibility Principle in Chapter 7 of this book, exploring more complex scenarios and providing additional insights into how SRP can be applied effectively to improve the design and maintainability of software systems.
 </p>
 
-# 5.4. Open-Closed Principle (OCP)
+## 5.4. Open-Closed Principle (OCP)
 <p style="text-align: justify;">
 The Open-Closed Principle (OCP) is a fundamental concept in software design that asserts that software entities, such as classes or modules, should be open for extension but closed for modification. This principle aims to ensure that a system can be extended with new features or behavior without altering existing code, thus preserving stability and reducing the risk of introducing bugs into the existing system. By adhering to OCP, developers can build systems that are more flexible and adaptable to changing requirements, while maintaining the integrity of the original code.
 </p>
@@ -223,7 +223,7 @@ This design makes it easy to add new discount strategies by simply implementing 
 Chapter 8 of this book will explore the Open-Closed Principle in greater detail, examining additional examples and providing further guidance on how to effectively apply OCP to create flexible and maintainable software systems.
 </p>
 
-# 5.5. Liskov Substitution Principle (LSP)
+## 5.5. Liskov Substitution Principle (LSP)
 <p style="text-align: justify;">
 The Liskov Substitution Principle (LSP) is a key concept in object-oriented design that states that objects of a superclass should be replaceable with objects of a subclass without altering the correctness of the program. In essence, this principle ensures that a subclass maintains the behavior expected by the superclass, allowing it to be used interchangeably without introducing errors or inconsistencies. By adhering to LSP, developers can create a more reliable and predictable inheritance hierarchy, which enhances the flexibility and reusability of code.
 </p>
@@ -283,7 +283,7 @@ By ensuring that <code>Square</code> provides a correct implementation of the <c
 In Chapter 9 of this book, we will delve deeper into the Liskov Substitution Principle, examining more complex scenarios and providing additional insights on how to effectively apply LSP to ensure reliable and consistent software design.
 </p>
 
-# 5.6. Interface Segregation Principle (ISP)
+## 5.6. Interface Segregation Principle (ISP)
 <p style="text-align: justify;">
 The Interface Segregation Principle (ISP) is a fundamental design guideline that asserts clients should not be forced to depend on interfaces they do not use. This principle aims to create more focused and manageable interfaces by ensuring that each interface is tailored to the needs of its clients, rather than being overloaded with methods that may not be relevant to all implementing types. By adhering to ISP, developers can reduce the risk of unintended dependencies and make their code more modular and easier to maintain.
 </p>
@@ -374,7 +374,7 @@ In this refactored design, the <code>LightBulb</code> and <code>Television</code
 In Chapter 10 of this book, we will explore the Interface Segregation Principle in greater depth, examining additional examples and providing further insights into how ISP can be applied to design more effective and modular interfaces in software development.
 </p>
 
-# 5.7. Dependency Inversion Principle (DIP)
+## 5.7. Dependency Inversion Principle (DIP)
 <p style="text-align: justify;">
 The Dependency Inversion Principle (DIP) is a crucial concept in software design that suggests high-level modules should not depend on low-level modules, but rather both should depend on abstractions. Additionally, abstractions should not depend on details; details should depend on abstractions. This principle aims to reduce the coupling between different parts of a system, making it more flexible and easier to modify or extend. By adhering to DIP, developers can create systems where changes in low-level implementations do not impact high-level logic, thus promoting better separation of concerns and enhancing code maintainability.
 </p>
@@ -453,7 +453,7 @@ This adherence to DIP enhances flexibility by allowing changes to the storage me
 Chapter 11 of this book will delve deeper into the Dependency Inversion Principle, exploring additional examples and providing further insights into how DIP can be effectively applied to achieve flexible and maintainable software architecture.
 </p>
 
-# 5.8. Common Misconceptions and Misapplications
+## 5.8. Common Misconceptions and Misapplications
 <p style="text-align: justify;">
 The SOLID design principles, while foundational for creating robust and maintainable software, are often subject to misconceptions and misapplications that can lead to confusion and ineffective implementations. One common misunderstanding is that these principles are rigid rules that must be strictly followed without deviation. In reality, SOLID principles are intended as flexible guidelines that help developers create more adaptable and maintainable code, rather than hard-and-fast rules that must be enforced in every situation.
 </p>
@@ -482,7 +482,7 @@ Lastly, the Dependency Inversion Principle (DIP) is sometimes misinterpreted as 
 Overall, the SOLID principles are meant to guide developers toward creating flexible, maintainable, and scalable software. They should be applied thoughtfully, taking into account the specific context and needs of the project. Misunderstandings and misapplications of these principles can lead to counterproductive results, but a nuanced understanding of their intent and flexibility can help developers implement them effectively and adaptively in their designs.
 </p>
 
-# 5.9. The Role of SOLID in Modern Software Development
+## 5.9. The Role of SOLID in Modern Software Development
 <p style="text-align: justify;">
 The SOLID principles play a significant role in shaping modern software development practices, particularly in the context of Agile methodologies and DevOps practices. These principles align closely with the core objectives of Agile and DevOps, which emphasize flexibility, iterative improvements, and continuous integration and delivery.
 </p>
@@ -507,7 +507,7 @@ Modular architectures, which focus on breaking down systems into self-contained,
 In summary, the SOLID principles are deeply integrated into modern software development practices, offering guidance that aligns with Agile and DevOps methodologies and enhances the design of microservices and modular architectures. By adhering to these principles, development teams can create systems that are more adaptable, maintainable, and scalable, ultimately supporting the goals of continuous improvement and efficient delivery in contemporary software projects.
 </p>
 
-## 5.9.1. Simple Application using SOLID Design Principles
+### 5.9.1. Simple Application using SOLID Design Principles
 <p style="text-align: justify;">
 In this section, we present a simple calculator implemented in Rust, demonstrating the application of SOLID design principles. The program takes mathematical expressions as input from a text stream, tokenizes the input, parses it into an Abstract Syntax Tree (AST), and evaluates the expression. This example illustrates Rust's capabilities in managing complex data structures and algorithms while adhering to best practices in software design. The implementation is modular, extensible, and robust, ensuring that each component has a clearly defined role and can be independently tested and maintained.
 </p>
@@ -729,12 +729,12 @@ This implementation exemplifies the SOLID principles, providing a clean and main
 </p>
 
 ## 
-# 5.10. Conclusion
+## 5.10. Conclusion
 <p style="text-align: justify;">
 Understanding and applying SOLID principles in software design is crucial for crafting robust, maintainable, and scalable systems. These principles—Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion—provide a foundational framework for structuring code in a way that promotes clarity, flexibility, and resilience against change. By adhering to SOLID principles, developers can avoid common pitfalls such as tightly coupled components and excessive complexity, ensuring that codebases remain manageable and adaptable over time. This disciplined approach not only enhances the quality and longevity of software but also facilitates easier maintenance, testing, and evolution, ultimately leading to more reliable and effective software solutions.
 </p>
 
-## 5.10.1. Advices
+### 5.10.1. Advices
 <p style="text-align: justify;">
 Implementing SOLID design principles in Rust requires a nuanced understanding of the language's unique features and a strategic approach to software architecture. The Single Responsibility Principle (SRP), which dictates that a class or module should have only one reason to change, aligns well with Rust’s module system and type safety. To adhere to SRP, Rust developers should focus on defining clear and concise modules and structs with specific, well-defined responsibilities. Each module or struct should encapsulate a single aspect of the functionality, thereby reducing complexity and enhancing maintainability. By leveraging Rust’s strong type system and encapsulation features, you can design components that are modular and isolated, thus preventing code smells related to high cohesion and low coupling.
 </p>
@@ -759,7 +759,7 @@ Lastly, the Dependency Inversion Principle (DIP) is addressed in Rust through th
 In summary, implementing SOLID design principles in Rust involves leveraging the language’s features—such as traits, generics, modules, and enums—to create well-structured, maintainable, and efficient code. By adhering to SRP, OCP, LSP, ISP, and DIP, Rust developers can design systems that are robust, extensible, and free from common code smells, ultimately resulting in high-quality software that is both reliable and adaptable.
 </p>
 
-## 5.10.2. Further Learning with GenAI
+### 5.10.2. Further Learning with GenAI
 <p style="text-align: justify;">
 Run the following prompts with ChatGPT and Gemini to deepen your understanding and gain valuable insights. Think of GenAI as a vast library: the more time you spend exploring it, the more knowledge you'll acquire.
 </p>
