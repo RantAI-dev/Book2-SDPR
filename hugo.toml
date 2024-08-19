@@ -176,3 +176,5 @@ title = 'Software Design Pattern in Rust'
 [services]
   [services.disqus]
     shortname = 'rantai'
+  [services.googleAnalytics]
+    ID = 'G-9K158E85ZB'
