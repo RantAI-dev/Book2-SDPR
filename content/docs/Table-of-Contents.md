@@ -17,7 +17,7 @@ Explore the chapters below to dive deep into advanced programming paradigms and 
 
 ### **Main Sections**
 
-- [**Software Design Pattern in Rust**](/docs/software-design-patterns-in-rust/)
+- [**Software Design Patterns in Rust**](/docs/software-design-patterns-in-rust/)
 - [**Preface**](/docs/preface/)
 - [**Foreword-1**](/docs/foreword/)
 - [**Foreword-2**](/docs/foreword/)

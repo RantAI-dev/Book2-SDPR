@@ -1,6 +1,6 @@
 baseURL = 'https://sdpr.rantai.dev'
 languageCode = 'en-us'
-title = 'Software Design Pattern in Rust'
+title = 'Software Design Patterns in Rust'
 
 [module]
     # uncomment line below for temporary local development of module,
@@ -15,7 +15,7 @@ title = 'Software Design Pattern in Rust'
         
 [languages]
   [languages.en]
-    title = "Software Design Pattern in Rust"
+    title = "Software Design Patterns in Rust"
     languageName = "English"
     weight = 1
 

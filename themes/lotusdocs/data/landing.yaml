@@ -25,7 +25,7 @@ hero:
     height: 80px
 
   title: "Welcome!"
-  subtitle: Software Design Pattern in Rust (SDPR)
+  subtitle: Software Design Patterns in Rust (SDPR)
   image:
     path: "images" # path to image under configured assets directory. default 'images'
     filename: "P8MKxO7NRG2n396LeSEs-GwKBjxxYsu065L5olhOV-v1.png" # filename of your hero image (including file extension)
