@@ -19,12 +19,13 @@ toc: true
 {{% /alert %}}
 
 {{% alert icon="📘" context="success" %}}
+
 <p style="text-align: justify;">
 <strong>Chapter 1 of SDPR explores the ubiquitous nature of poorly written code in the software industry. It highlights the characteristics of bad code, such as inconsistency, lack of clarity, and complexity, often resulting from common pitfalls and anti-patterns. Through real-world examples, the chapter illustrates the negative consequences of bad code, including technical debt, increased maintenance costs, and the potential for critical failures. The discussion extends to the psychological and organizational factors that contribute to the proliferation of bad code, such as inexperience, pressure from deadlines, and ineffective communication. The chapter underscores the importance of identifying and addressing these issues early, setting the stage for the introduction of good design patterns as a solution for achieving maintainable, efficient, and robust software.</strong>
 </p>
 {{% /alert %}}
 
-# 1.1. Introduction
+## 1.1. Introduction
 <p style="text-align: justify;">
 In the realm of software development, bad code is an all-too-common phenomenon. Despite the advances in programming languages, development tools, and methodologies, the software industry continues to grapple with issues stemming from poorly written code. This prevalence is not a mere oversight but a systemic issue that impacts software quality, maintainability, and scalability across the industry.
 </p>
@@ -54,7 +55,7 @@ As developers, especially those working with Rust, it is imperative to be vigila
 In this SDPR book, we will explore how to identify, understand, and rectify bad code patterns, while also emphasizing best practices and design patterns that contribute to producing high-quality code. By honing these skills, every software engineer can significantly enhance their coding practices and contribute to the development of more reliable and efficient software systems.
 </p>
 
-# 1.2. Defining Bad Codes
+## 1.2. Defining Bad Codes
 <p style="text-align: justify;">
 Understanding and identifying bad code is essential for any software engineer committed to writing high-quality, maintainable Rust code. This section delves into the definition of bad code, its key characteristics, common signs, and prevalent pitfalls and anti-patterns that Rust programmers should be aware of.
 </p>
@@ -94,7 +95,7 @@ Rust programmers should be aware of specific pitfalls and anti-patterns that can
 By understanding the characteristics, signs, and common pitfalls of bad code, Rust programmers can better identify and address issues early in the development process. Awareness of these factors equips developers to write cleaner, more maintainable code, thereby contributing to the creation of robust and reliable software systems. In the following sections, we will explore specific design patterns and practices that can help mitigate these issues and promote high-quality Rust programming.
 </p>
 
-## 1.3. Examples of Bad Codes
+### 1.3. Examples of Bad Codes
 <p style="text-align: justify;">
 Understanding bad code and code smells is essential for improving software quality. This section provides real-world examples and case studies of bad code and code smells, analyzing their technical implications and discussing their impact on business and society.
 </p>
@@ -237,7 +238,7 @@ By using safe references, this function avoids the risks associated with raw poi
 These examples and case studies highlight the technical implications of bad code and code smells. By recognizing these issues and addressing them effectively, Rust programmers can improve code quality, reduce maintenance efforts, and enhance the reliability of software systems. In the following sections, we will explore design patterns and best practices to address these challenges and foster high-quality Rust programming.
 </p>
 
-# 1.4. Consequences of Bad Codes
+## 1.4. Consequences of Bad Codes
 <p style="text-align: justify;">
 Understanding the short-term and long-term impacts of bad code is crucial for managing software projects effectively. This section explores how bad code affects software development and maintenance, analyzes technical debt and maintenance challenges, and explains why it is vital to address bad code early in the development process.
 </p>
@@ -310,7 +311,7 @@ Additionally, addressing bad code early contributes to better team morale and co
 In conclusion, avoiding bad code and managing technical debt early in the development process is crucial for the long-term success of software projects. By prioritizing code quality and addressing issues proactively, teams can reduce maintenance costs, improve performance, and enhance overall software reliability. This approach not only benefits the immediate development process but also ensures a more sustainable and successful software lifecycle.
 </p>
 
-# 1.5. Psychological and Organizational Factors
+## 1.5. Psychological and Organizational Factors
 <p style="text-align: justify;">
 Bad code often arises from a complex interplay of psychological, cultural, and systemic issues within software development organizations. Understanding these underlying factors is crucial for addressing and mitigating the root causes of poor code quality. This section delves into the reasons behind bad code, examining both individual and organizational influences that contribute to code quality issues.
 </p>
@@ -391,7 +392,7 @@ An organization that does not invest in modern development tools and infrastruct
 Bad code often results from a combination of individual, psychological, cultural, and systemic factors. By understanding these underlying causes, software development organizations can take proactive steps to address and mitigate the issues that lead to bad code. Fostering a culture that values code quality, providing adequate tools and processes, and supporting developers in their professional growth are essential for improving code quality and ensuring the long-term success of software projects.
 </p>
 
-# 1.6. The Role of Good Design Patterns
+## 1.6. The Role of Good Design Patterns
 <p style="text-align: justify;">
 Design patterns and principles are foundational concepts in software engineering that guide developers in creating robust, maintainable, and scalable systems. Understanding and applying these concepts is crucial for mitigating issues of bad code and code smells. This section delves into the SOLID design principles, the scope and concepts of software design patterns, their relationship with code refactoring, and why Rust programmers should prioritize learning these practices.
 </p>
@@ -455,7 +456,7 @@ For Rust programmers, learning and applying design patterns is essential for sev
 In summary, design patterns are invaluable tools for improving software design and addressing issues of bad code. By understanding and applying design patterns, Rust programmers can create more modular, maintainable, and scalable systems, ultimately leading to higher-quality software and more successful projects.
 </p>
 
-# 1.7. Conclusion
+## 1.7. Conclusion
 <p style="text-align: justify;">
 SDPR (Software Design Patterns and Refactoring) is an essential book for Rust programmers because it delves into the critical role of design patterns in software development. Design patterns offer proven solutions to common software design problems, promoting best practices and helping developers create robust, maintainable, and efficient code. For Rust programmers, understanding and applying these patterns is particularly important due to the language's emphasis on safety, concurrency, and performance.
 </p>
@@ -464,7 +465,7 @@ SDPR (Software Design Patterns and Refactoring) is an essential book for Rust pr
 The book provides insights into how design patterns can be adapted to Rust's unique features, such as ownership, borrowing, and lifetimes, which are fundamental to managing memory safely and efficiently. By mastering design patterns, Rust programmers can avoid common pitfalls and anti-patterns, leading to more readable, reliable, and scalable codebases. Furthermore, SDPR covers strategies for refactoring, helping developers improve existing code by identifying and eliminating bad code practices, reducing technical debt, and facilitating smoother collaboration within teams. This knowledge is invaluable for building high-quality software and advancing one's skills in the Rust ecosystem.
 </p>
 
-## 1.7.2. Advices
+### 1.7.2. Advices
 <p style="text-align: justify;">
 In this sub-section, we provide comprehensive advices for Rust programmers to address common software design problems, manage bad code and code smells, and mitigate the impact of technical debt. These guidelines are rooted in Rust's unique features, such as its ownership and borrowing system, and are aimed at promoting best practices in writing clean, efficient, and maintainable code.
 </p>
@@ -481,7 +482,7 @@ In this sub-section, we provide comprehensive advices for Rust programmers to ad
 By implementing these strategies, Rust developers can tackle common software design challenges, avoid bad coding practices, and manage technical debt effectively. For a deeper understanding and mastery of the Rust language, we recommend referring to <strong>The Rust Programming Language</strong> (TRPL) book by RantAI. TRPL provides in-depth explanations and practical examples of Rust's core features, idioms, and best practices. In this SDPR book, we proceed with the assumption that readers have already completed TRPL, as it serves as a foundational resource for the concepts and techniques discussed here.
 </p>
 
-## 1.7.3. Further Learning with GenAI
+### 1.7.3. Further Learning with GenAI
 <p style="text-align: justify;">
 Run the following prompts with ChatGPT and Gemini to deepen your understanding and gain valuable insights. Think of GenAI as a vast library: the more time you spend exploring it, the more knowledge you'll acquire.
 </p>
