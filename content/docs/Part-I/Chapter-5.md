@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:18:04+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 5: A Tour Rust - SOLID Design Principles
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.</em>" — Bertrand Meyer</strong>

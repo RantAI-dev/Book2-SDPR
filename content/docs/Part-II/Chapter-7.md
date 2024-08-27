@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:18:36+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 7: Single Responsibility Principle (SRP)
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>A class should have only one reason to change.</em>" — Robert C. Martin</strong>
 {{% /alert %}}

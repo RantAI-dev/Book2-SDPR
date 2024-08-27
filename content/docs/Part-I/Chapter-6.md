@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:18:25+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 6: A Tour of Rust - GoF Design Patterns
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Design patterns are a shared vocabulary that we can use to communicate complex ideas more simply.</em>" — Erich Gamma</strong>

@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:18:41+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 10: Interface Segregation Principle (ISP)
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Clients should not be forced to depend upon interfaces that they do not use.</em>" — Robert C. Martin</strong>

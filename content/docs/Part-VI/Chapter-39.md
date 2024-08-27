@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:20:26+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 39: Saga Pattern
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Sagas provide a way to handle distributed transactions by breaking them into a series of local transactions, each of which can be compensated if necessary.</em>" — Martin Fowler</strong>
 {{% /alert %}}

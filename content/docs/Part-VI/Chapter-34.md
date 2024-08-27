@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:20:15+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 34: Event Sourcing
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The goal of computer science is to build systems that are simple, reliable, and adaptable to change.</em>" — David Parnas</strong>

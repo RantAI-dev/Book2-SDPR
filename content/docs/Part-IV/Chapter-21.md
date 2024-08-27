@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:24+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 21: Facade
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Facade pattern provides a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use.</em>" — Erich Gamma</strong>

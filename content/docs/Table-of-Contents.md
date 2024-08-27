@@ -10,8 +10,6 @@ toc: true
 ---
 
 {{% alert icon="📘" context="info" %}}
-### **SDPR's Table of Contents**
-
 Explore the chapters below to dive deep into advanced programming paradigms and design patterns using Rust.
 {{% /alert %}}
 

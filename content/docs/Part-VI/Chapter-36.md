@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:20:19+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 36: Microservices
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Software engineering is the process of creating software that works correctly, is maintainable, and meets the needs of the users.</em>" — Grady Booch</strong>
 {{% /alert %}}

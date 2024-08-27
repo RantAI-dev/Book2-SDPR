@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:20:30+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 41: Reactive Programming
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The purpose of computing is insight, not numbers.</em>" — John McCarthy</strong>
 {{% /alert %}}

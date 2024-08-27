@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:27+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 23: Proxy
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Proxy pattern provides a surrogate or placeholder for another object to control access to it. It is used to add additional functionality and manage interactions in a controlled manner.</em>" — Erich Gamma</strong>

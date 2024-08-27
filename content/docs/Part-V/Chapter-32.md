@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:56+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 32: Template Method
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Template Method pattern defines the skeleton of an algorithm in the base class but lets subclasses override specific steps of the algorithm without changing its structure.</em>" — Erich Gamma</strong>

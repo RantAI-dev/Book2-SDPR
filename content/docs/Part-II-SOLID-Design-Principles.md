@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:16:39+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Part 2: SOLID Design Principles
-
-</center>
 
 {{% alert icon="💡" context="info" %}}<strong>"<em>Good design adds value faster than it adds cost.</em>" — Thomas C. Gale</strong>{{% /alert %}}
 

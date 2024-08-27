@@ -9,11 +9,6 @@ draft: false
 toc: true
 ---
 
-<center>
-
-# 📘 Chapter 11: Dependency Inversion Principle (DIP)
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>High-level modules should not depend on low-level modules. Both should depend on abstractions.</em>" — Robert C. Martin</strong>

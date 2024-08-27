@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:19:48+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 28: Memento
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Memento pattern provides the ability to restore an object to its previous state (undo via rollback), without exposing the details of its implementation.</em>" — Erich Gamma</strong>
 {{% /alert %}}

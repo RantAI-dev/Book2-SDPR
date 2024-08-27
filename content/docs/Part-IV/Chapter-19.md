@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:17+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 19: Composite
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Composite pattern allows you to compose objects into tree structures to represent part-whole hierarchies. It simplifies the client code by treating individual objects and compositions uniformly.</em>" — Erich Gamma</strong>

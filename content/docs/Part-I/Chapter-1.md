@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:17:55+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 1: Bad Codes Everywhere
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The only way to go fast is to go well.</em>" — Robert C. Martin</strong>

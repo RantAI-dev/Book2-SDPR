@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:19:45+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 27: Mediator
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Mediator pattern defines an object that encapsulates how a set of objects interact. It promotes loose coupling by keeping objects from referring to each other explicitly and lets you vary their interaction independently.</em>" — Erich Gamma</strong>
 {{% /alert %}}

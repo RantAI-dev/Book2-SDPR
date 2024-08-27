@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:16:51+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Part 5: Behavioral Patterns
-
-</center>
 
 {{% alert icon="💡" context="info" %}}<strong>"<em>The most powerful tool we have as developers is the way we think.</em>" — Kent Beck</strong>{{% /alert %}}
 

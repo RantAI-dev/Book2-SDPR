@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:17:57+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 2: Codes Smells
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</em>" — Martin Fowler</strong>

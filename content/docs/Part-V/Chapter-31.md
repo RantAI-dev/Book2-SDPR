@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:54+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 31: Strategy
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. The Strategy lets the algorithm vary independently from clients that use it.</em>" — Erich Gamma</strong>
