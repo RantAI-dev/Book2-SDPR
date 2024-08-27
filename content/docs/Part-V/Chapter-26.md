@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:41+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 26: Iterator
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Iterator pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</em>" — Erich Gamma</strong>

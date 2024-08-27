@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:13+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 17: Adapter
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Adapter pattern allows classes to work together that couldn’t otherwise because of incompatible interfaces. It provides a way to make existing classes work with new interfaces without modifying their source code.</em>" — Erich Gamma</strong>

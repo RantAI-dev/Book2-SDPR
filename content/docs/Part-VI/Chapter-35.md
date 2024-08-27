@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:20:17+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 35: CQRS (Command Query Responsibility Segregation)
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Everything should be made as simple as possible, but not simpler.</em>" — Albert Einstein</strong>

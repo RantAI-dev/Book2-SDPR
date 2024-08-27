@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:58+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 33: Visitor
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Visitor pattern lets you define a new operation without changing the classes of the elements on which it operates.</em>" — Erich Gamma</strong>

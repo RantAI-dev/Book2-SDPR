@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:00+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 15: Builder
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Builder pattern separates the construction of a complex object from its representation so that the same construction process can create different representations.</em>" — Erich Gamma</strong>

@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:16:54+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Part 6: Advanced Architectural Patterns
-
-</center>
 
 {{% alert icon="💡" context="info" %}}<strong>"<em>The best architectures, requirements, and designs emerge from self-organizing teams.</em>" — Agile Manifesto Principles</strong>{{% /alert %}}
 

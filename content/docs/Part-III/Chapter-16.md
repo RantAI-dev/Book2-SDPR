@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:04+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 16: Prototype
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Prototype pattern specifies the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</em>" — Erich Gamma</strong>

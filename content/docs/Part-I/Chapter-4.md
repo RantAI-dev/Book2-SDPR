@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:18:02+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 4: 'A Tour of Rust - Abstraction Mechanism '
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Abstraction is the key to computer science. It allows us to manage complexity by hiding details.</em>" — Barbara Liskov</strong>

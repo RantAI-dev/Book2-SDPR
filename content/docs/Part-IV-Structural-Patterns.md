@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:16:49+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Part 4: Structural Patterns
-
-</center>
 
 {{% alert icon="💡" context="info" %}}<strong>"<em>Good architecture is not just about making things look nice. It’s about making them work well.</em>" — Michael Bierut</strong>{{% /alert %}}
 

@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:52+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 30: State
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The State pattern allows an object to change its behavior when its internal state changes. The object will appear to change its class.</em>" — Erich Gamma</strong>

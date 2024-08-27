@@ -9,13 +9,6 @@ draft: false
 toc: true
 ---
 
-
-<center>
-
-# 📘 Part I: Introduction
-
-</center>
-
 {{% alert icon="💡" context="info" %}}<strong>"<em>Code is like humor. When you have to explain it, it’s bad.</em>" — Cory House.</strong>{{% /alert %}}
 
 {{% alert icon="📘" context="success" %}}

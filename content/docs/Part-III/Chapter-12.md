@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:18:53+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 12: Singleton
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>A Singleton ensures that a class has only one instance and provides a global point of access to it.</em>" — Erich Gamma</strong>

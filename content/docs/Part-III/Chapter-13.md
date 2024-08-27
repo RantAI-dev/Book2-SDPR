@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:18:56+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 13: Factory Method
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Factory methods are used to avoid dealing with the complexities of object creation and provide a convenient way to instantiate objects without exposing the instantiation logic.</em>" — Erich Gamma</strong>
 {{% /alert %}}

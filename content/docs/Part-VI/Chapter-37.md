@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:20:21+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 37: Domain-Driven Design
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Domain-Driven Design is about focusing on the core domain and domain logic to produce a model that accurately reflects the complexity and intricacies of the business problem.</em>" — Eric Evans</strong>
 {{% /alert %}}

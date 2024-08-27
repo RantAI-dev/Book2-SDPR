@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:36+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 24: Chain of Responsibility
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Chain of Responsibility pattern allows an object to pass a request along a chain of potential handlers. It decouples the sender and receiver of a request and enables multiple objects to handle it.</em>" — Erich Gamma</strong>

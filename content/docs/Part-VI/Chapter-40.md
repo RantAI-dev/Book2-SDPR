@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:20:28+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 40: Circuit Breaker
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The circuit breaker pattern is a strategy for controlling the interaction between services by detecting failures and preventing the system from making requests that are likely to fail.</em>" — Michael Nygard</strong>

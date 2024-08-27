@@ -9,12 +9,6 @@ draft: false
 toc: true
 ---
 
-<center>
-
-# 📘 Chapter 8: Open-Closed Principle (OCP)
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.</em>" — Bertrand Meyer</strong>
 {{% /alert %}}

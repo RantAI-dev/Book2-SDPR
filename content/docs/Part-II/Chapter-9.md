@@ -9,11 +9,6 @@ draft: false
 toc: true
 ---
 
-<center>
-
-# 📘 Chapter 9: Liskov Substitution Principle (LSP)
-
-</center>
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>What is wanted here is something like the notion of 'is substitutable for</em>" — Barbara Liskov</strong>
 {{% /alert %}}

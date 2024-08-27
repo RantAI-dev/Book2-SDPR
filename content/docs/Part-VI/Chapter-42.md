@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:20:31+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 42: Service Mesh
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>We need to make it easy to create and use services, and we need to make it easier to see how they work together.</em>" — Tim Berners-Lee</strong>

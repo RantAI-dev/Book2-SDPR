@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:18:58+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 14: Abstract Factory
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Abstract Factory patterns work around a super-factory which creates other factories. This pattern is also called as Factory of factories.</em>" — Erich Gamma</strong>

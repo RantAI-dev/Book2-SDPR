@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:20:24+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 38: Hexagonal Architecture
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Hexagonal Architecture pattern is about separating the application's core logic from the external agents that interact with it. This separation allows for greater flexibility and ease of testing.</em>" — Alistair Cockburn.</strong>

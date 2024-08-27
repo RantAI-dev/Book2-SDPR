@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:50+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 29: Observer
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</em>" — Erich Gamma</strong>

@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:19:26+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 22: Flyweight
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Flyweight pattern uses sharing to support large numbers of fine-grained objects efficiently. It provides a way to manage a large number of objects without consuming excessive memory.</em>" — Erich Gamma</strong>
 {{% /alert %}}

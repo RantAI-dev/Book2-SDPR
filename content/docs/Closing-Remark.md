@@ -9,11 +9,6 @@ draft: false
 toc: true
 ---
 
-<center>
-
-## 🚪 Closing Remark
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The first principle is that you must not fool yourself—and you are the easiest person to fool.</em>" — Richard Feynman</strong>

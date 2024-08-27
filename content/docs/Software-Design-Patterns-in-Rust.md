@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:15:27+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-## 📘 Welcome to "Software Design Patterns in Rust"
-
-</center>
 
 {{< figure src="/images/P8MKxO7NRG2n396LeSEs-GwKBjxxYsu065L5olhOV-v1.png" width="500" height="300" class="text-center" >}}
 
@@ -46,8 +41,7 @@ toc: true
 
 {{% alert icon="🚀" context="success" %}}
 <p style="text-align: justify;">
-RantAI is a dynamic Indonesian tech startup dedicated to advancing technology through the innovative use of Rust programming. Originating from the collaborative efforts of Telkom University and the University of Indonesia, RantAI initially focused on scientific computation publishing, leveraging Rust’s capabilities to push the boundaries of computational science. Our mid-term vision is to expand into technology consulting, offering expert guidance on Rust-based solutions. Looking ahead, RantAI aims to develop a cutting-edge digital twin simulation platform, designed to address complex scientific problems with precision and efficiency. Through these strategic endeavors, RantAI is committed to transforming how scientific challenges are approached and solved using advanced technology.
-</p>
+RantAI started as pioneer in open book publishing for scientific computing, setting the standard for technological innovation. As a premier System Integrator (SI), we specialize in addressing complex scientific challenges through advanced Machine Learning, Deep Learning, and Agent-Based Modeling. Our proficiency in AI-driven coding and optimization allows us to deliver comprehensive, end-to-end scientific simulation and digital twin solutions. At RantAI, we are dedicated to pushing the boundaries of technology, delivering cutting-edge solutions to tackle the world's most critical scientific problems.</p>
 {{% /alert %}}
 
 <center>

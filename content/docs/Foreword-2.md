@@ -1,6 +1,6 @@
 ---
 weight: 500
-title: "Foreword-2"
+title: "Foreword"
 description: "Telkom University"
 icon: "school"
 date: "2024-08-13T23:53:33+07:00"

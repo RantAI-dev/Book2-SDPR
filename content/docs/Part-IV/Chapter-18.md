@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:19:15+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 18: Bridge
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Bridge pattern decouples an abstraction from its implementation so that the two can vary independently. It is a powerful way to create a flexible system with interchangeable parts.</em>" — Erich Gamma</strong>
 {{% /alert %}}

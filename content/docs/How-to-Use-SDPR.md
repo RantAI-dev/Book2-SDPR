@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:16:20+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter : Guide for Students and Lecturers
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The more you know about something, the more you realize how much you don’t know. The more you learn, the more you understand, and the more you realize how much more there is to learn.</em>" — Richard Feynman</strong>

@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:20:33+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 43: Observer Pattern with Event-Driven Architecture
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The goal is not to be perfect by the end. The goal is to be better today.</em>" — Simon Sinek</strong>

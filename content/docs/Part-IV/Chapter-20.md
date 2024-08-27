@@ -8,12 +8,6 @@ lastmod: "2024-08-13T23:19:20+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 20: Decorator
-
-</center>
-
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Decorator pattern allows you to add new functionality to an object dynamically without altering its structure. It provides a flexible alternative to subclassing for extending functionality.</em>" — Erich Gamma</strong>
 {{% /alert %}}

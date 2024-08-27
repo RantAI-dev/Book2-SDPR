@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:17:59+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 3: Codes Refactoring
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>Refactoring is a disciplined way to clean up code that minimizes the chances of introducing bugs. It’s an essential part of a programmer’s toolbox.</em>" — Martin Fowler</strong>

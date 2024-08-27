@@ -8,11 +8,6 @@ lastmod: "2024-08-13T23:19:38+07:00"
 draft: false
 toc: true
 ---
-<center>
-
-# 📘 Chapter 25: Command
-
-</center>
 
 {{% alert icon="💡" context="info" %}}
 <strong>"<em>The Command pattern encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.</em>" — Erich Gamma</strong>
